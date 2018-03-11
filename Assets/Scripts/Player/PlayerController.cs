@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool falling;
-    int weapon = 0;
+    int weapon = 1;
     bool block;
     CharacterController cc;
     Animator anim;
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            ChangeWeapon();
+            //ChangeWeapon();
         }
 
         if (Input.GetButton("Fire1"))
@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             block = false;
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            anim.SetTrigger("Attack");
         }
 
         Movement(horizontal, vertical);
@@ -103,7 +108,6 @@ public class PlayerController : MonoBehaviour
         }
 
         cc.SimpleMove(move * currentSpeed);
-
     }
 
     void UpdateAnimator()
@@ -137,7 +141,7 @@ public class PlayerController : MonoBehaviour
     void ChangeWeapon()
     {
         weapon++;
-        if (weapon > 3)
+        if (weapon > 1)
         {
             weapon = 0;
         }
