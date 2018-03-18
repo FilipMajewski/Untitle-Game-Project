@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4665998523585482}
   - component: {fileID: 33860664111596538}
   - component: {fileID: 23442367171275566}
+  - component: {fileID: 64892568970621862}
   m_Layer: 0
   m_Name: bridge_1
   m_TagString: Untagged
@@ -81,4 +82,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059922061321872}
+  m_Mesh: {fileID: 4300000, guid: e81b4e0ea0e589e4d8f020bacf82d46b, type: 3}
+--- !u!64 &64892568970621862
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059922061321872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e81b4e0ea0e589e4d8f020bacf82d46b, type: 3}

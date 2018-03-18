@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4944743478116758}
   - component: {fileID: 33792812710177232}
   - component: {fileID: 23445010398276366}
+  - component: {fileID: 64040672987946650}
   m_Layer: 0
   m_Name: pCube29
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1699746898144922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.057289, y: 0, z: -21.92321}
+  m_LocalPosition: {x: 15.225088, y: 0, z: 73.7856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4917801419019214}
@@ -200,7 +201,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 793e68905f4bda84ea4db1477c833367, type: 2}
+  - {fileID: 2100000, guid: 83e76ec14c3703d47bb52fab0d365c09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,4 +227,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1164271904051820}
+  m_Mesh: {fileID: 4300000, guid: 9c3585b56c911d148bb67f39d24ccbe6, type: 3}
+--- !u!64 &64040672987946650
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164271904051820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 9c3585b56c911d148bb67f39d24ccbe6, type: 3}

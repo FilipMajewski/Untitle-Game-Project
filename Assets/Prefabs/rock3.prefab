@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4971428070380740}
   - component: {fileID: 33824208072774562}
   - component: {fileID: 23624283521492692}
+  - component: {fileID: 64130634172813486}
   m_Layer: 0
   m_Name: bolder3
   m_TagString: Untagged
@@ -50,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971966040675904}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.75, y: 0, z: -24.737394}
+  m_LocalPosition: {x: 4.6538343, y: 0, z: -48.046997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4971428070380740}
@@ -84,7 +85,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 793e68905f4bda84ea4db1477c833367, type: 2}
+  - {fileID: 2100000, guid: 83e76ec14c3703d47bb52fab0d365c09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,4 +111,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1637783469517974}
+  m_Mesh: {fileID: 4300000, guid: 48f7ced91a23d6b43a6fa865625aaf25, type: 3}
+--- !u!64 &64130634172813486
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637783469517974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 48f7ced91a23d6b43a6fa865625aaf25, type: 3}

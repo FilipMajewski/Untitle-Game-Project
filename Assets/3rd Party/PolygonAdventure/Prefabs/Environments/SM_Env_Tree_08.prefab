@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 462940}
   - component: {fileID: 3331204}
   - component: {fileID: 2385152}
+  - component: {fileID: 136006625452831434}
   m_Layer: 0
   m_Name: SM_Env_Tree_08
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -48.50801, y: 19.996338, z: -47.579723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +83,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 134014}
   m_IsPrefabParent: 1
+--- !u!136 &136006625452831434
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.21
+  m_Height: 6.2141986
+  m_Direction: 1
+  m_Center: {x: -0.000004887581, y: 3.1070993, z: 0.0000004172325}

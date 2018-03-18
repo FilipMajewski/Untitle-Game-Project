@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4901801780304344}
   - component: {fileID: 33011878789167662}
   - component: {fileID: 23088136369063924}
+  - component: {fileID: 64458472066993894}
   m_Layer: 0
   m_Name: ramp_rocks_end
   m_TagString: Untagged
@@ -81,4 +82,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915494912396738}
+  m_Mesh: {fileID: 4300000, guid: 70aeb56a97e372448b41bfc994824a2c, type: 3}
+--- !u!64 &64458472066993894
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915494912396738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 70aeb56a97e372448b41bfc994824a2c, type: 3}
