@@ -27,15 +27,15 @@ public class PlayerFootsteps : MonoBehaviour
 
     void Update()
     {
-        walkingSpeed = pc.move.magnitude;
+        walkingSpeed = pc.Move.magnitude;
         //Debug.Log(pc.move.magnitude);
 
-        if (pc.move.magnitude >= 0.1f && pc.move.magnitude <= 0.5f && !pc.falling)
+        if (pc.Move.magnitude >= 0.1f && pc.Move.magnitude <= 0.5f && !pc.Falling)
         {
             playerIsWalking = true;
             playerIsRunning = false;
         }
-        else if (pc.move.magnitude >= 0.5f && !pc.falling)
+        else if (pc.Move.magnitude >= 0.5f && !pc.Falling)
         {
             playerIsRunning = true;
             playerIsWalking = false;
@@ -44,7 +44,7 @@ public class PlayerFootsteps : MonoBehaviour
         {
             playerIsWalking = false;
             playerIsRunning = false;
-            Debug.Log("Player is not moving");
+            //Debug.Log("Player is not moving");
         }
     }
 
@@ -52,14 +52,14 @@ public class PlayerFootsteps : MonoBehaviour
     {
         if (playerIsWalking == true)
         {
-            Debug.Log("Player is moving");
+            //Debug.Log("Player is moving");
             RuntimeManager.PlayOneShot(walkSound);
 
         }
 
         if (playerIsRunning == true)
         {
-            Debug.Log("Player is Running");
+            //Debug.Log("Player is Running");
             RuntimeManager.PlayOneShot(runSound);
         }
     }

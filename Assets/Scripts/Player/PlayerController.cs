@@ -8,28 +8,84 @@ public class PlayerController : MonoBehaviour
     public float maxMoveSpeed;
     public float rotationSmoothSpeed;
 
-    [HideInInspector]
-    public bool falling;
-    int weapon = 1;
-    bool block;
     CharacterController cc;
     Animator anim;
 
-    float horizontal, vertical, fallingTime;
+    private Vector3 move;
 
-    [HideInInspector]
-    public float currentSpeed;
-    [HideInInspector]
-    public Vector3 move;
+    private bool falling, block;
+    private int weapon;
+    private float horizontal, vertical, fallingTime, currentSpeed;
 
-    AnimatorStateInfo animationCurrentState;
-    AnimatorTransitionInfo transitionInfo;
+    #region Encapsulation
+    public float FallingTime
+    {
+        get
+        {
+            return fallingTime;
+        }
+        set
+        {
+            FallingTime = value;
+        }
+
+    }
+
+    public bool Falling
+    {
+        get
+        {
+            return falling;
+        }
+
+    }
+
+    public float CurrentSpeed
+    {
+        get
+        {
+            return currentSpeed;
+        }
+        set
+        {
+            currentSpeed = value;
+        }
+
+    }
+
+    public Vector3 Move
+    {
+        get
+        {
+            return move;
+        }
+
+    }
+
+    public bool Block
+    {
+        get
+        {
+            return block;
+        }
+    }
+
+    public int Weapon
+    {
+        get
+        {
+            return weapon;
+        }
+
+    }
+    #endregion
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
 
+        weapon = 0;
         currentSpeed = maxMoveSpeed;
         falling = false;
         fallingTime = 0;
@@ -59,11 +115,6 @@ public class PlayerController : MonoBehaviour
             falling = false;
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            //ChangeWeapon();
-        }
-
         if (Input.GetButton("Fire1"))
         {
             block = true;
@@ -79,8 +130,6 @@ public class PlayerController : MonoBehaviour
         }
 
         Movement(horizontal, vertical);
-
-        UpdateAnimator();
 
     }
 
@@ -110,41 +159,6 @@ public class PlayerController : MonoBehaviour
         cc.SimpleMove(move * currentSpeed);
     }
 
-    void UpdateAnimator()
-    {
-        animationCurrentState = anim.GetCurrentAnimatorStateInfo(0);
-        transitionInfo = anim.GetAnimatorTransitionInfo(0);
 
-        anim.SetFloat("Speed", Vector3.SqrMagnitude(move));
-        anim.SetBool("Falling", falling);
-        anim.SetFloat("FallingTime", fallingTime);
-
-        if (animationCurrentState.IsName("Hard Landing (1)"))
-        {
-            currentSpeed = Mathf.Lerp(0, maxMoveSpeed, transitionInfo.duration);
-            fallingTime = 0;
-        }
-        else if (animationCurrentState.IsName("Landing to Run") || animationCurrentState.IsName("Landing to Idle"))
-        {
-            currentSpeed = Mathf.Lerp(maxMoveSpeed / 2, maxMoveSpeed, transitionInfo.duration);
-            fallingTime = 0;
-        }
-        else
-        {
-            currentSpeed = maxMoveSpeed;
-        }
-
-        anim.SetInteger("Weapon", weapon);
-        anim.SetBool("Block", block);
-    }
-
-    void ChangeWeapon()
-    {
-        weapon++;
-        if (weapon > 1)
-        {
-            weapon = 0;
-        }
-    }
 }
 
