@@ -5,22 +5,25 @@ using UnityEngine;
 public class AnimationsEvents : MonoBehaviour
 {
 
-    public void Hit()
+    Interaction interaction;
+
+    private void Start()
+    {
+        interaction = GetComponentInParent<Interaction>();
+    }
+
+    public void AEFootR()
     {
     }
-    public void Shoot()
+    public void AEFootL()
     {
     }
-    public void FootR()
+    public void AELand()
     {
     }
-    public void FootL()
+
+    public void AEPickup()
     {
-    }
-    public void Land()
-    {
-    }
-    public void WeaponSwitch()
-    {
+        //interaction.Pickup();
     }
 }

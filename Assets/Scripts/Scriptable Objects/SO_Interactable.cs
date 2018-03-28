@@ -5,7 +5,7 @@ using UnityEngine;
 public class SO_Interactable : ScriptableObject
 {
     public int interactionArea;
-    public bool isWeapon;
+    public bool canPickup;
 
 
 }

@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
 
     CharacterController cc;
     Animator anim;
+    Interaction inter;
 
     private Vector3 move;
 
-    private bool falling, block;
-    private int weapon;
+    private bool falling;
     private float horizontal, vertical, fallingTime, currentSpeed;
 
     #region Encapsulation
@@ -62,30 +62,13 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public bool Block
-    {
-        get
-        {
-            return block;
-        }
-    }
-
-    public int Weapon
-    {
-        get
-        {
-            return weapon;
-        }
-
-    }
     #endregion
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
-
-        weapon = 0;
+        inter = GetComponent<Interaction>();
         currentSpeed = maxMoveSpeed;
         falling = false;
         fallingTime = 0;
@@ -115,21 +98,15 @@ public class PlayerController : MonoBehaviour
             falling = false;
         }
 
-        if (Input.GetButton("Fire1"))
-        {
-            block = true;
-        }
-        else
-        {
-            block = false;
-        }
-
         if (Input.GetButtonDown("Fire2"))
         {
-            anim.SetTrigger("Attack");
+
         }
 
-        Movement(horizontal, vertical);
+        if (!inter.Hiden)
+        {
+            Movement(horizontal, vertical);
+        }
 
     }
 

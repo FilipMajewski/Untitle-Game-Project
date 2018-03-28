@@ -7,6 +7,6 @@ public class SO_Item : SO_Interactable
 {
     [Header("Items specific")]
     public string itemName;
-    public int weaponNumber;
+    public int value;
 
 }
