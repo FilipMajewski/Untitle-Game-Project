@@ -15,11 +15,11 @@ TagManager:
   - UI
   - 
   - 
-  - Terrain
-  - Player
-  - Weapon
-  - 
-  - 
+  - Player Normal
+  - Player Hiden
+  - Enemies
+  - Hide on Enter Building
+  - Always Visible Parts Building
   - 
   - 
   - 

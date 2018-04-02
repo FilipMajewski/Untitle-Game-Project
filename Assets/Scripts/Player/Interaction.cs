@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     AnimationController animationController;
+    CharacterController cc;
 
     bool canInteract;
     bool canPickup;
@@ -62,6 +63,8 @@ public class Interaction : MonoBehaviour
     {
         valueToAdd = 0;
         animationController = GetComponentInChildren<AnimationController>();
+        cc = GetComponent<CharacterController>();
+
         hiden = false;
         canInteract = false;
     }
@@ -90,8 +93,6 @@ public class Interaction : MonoBehaviour
             }
         }
 
-
-
     }
 
     void Grab(GameObject interactionObject)
@@ -107,11 +108,13 @@ public class Interaction : MonoBehaviour
     void Hide()
     {
         hiden = true;
+        gameObject.layer = 9;
     }
 
     void Unhide()
     {
         hiden = false;
+        gameObject.layer = 8;
     }
 
 }
