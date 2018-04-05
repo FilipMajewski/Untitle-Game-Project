@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &171464
 GameObject:
@@ -27,12 +27,14 @@ GameObject:
   - component: {fileID: 496720}
   - component: {fileID: 3394776}
   - component: {fileID: 2352882}
+  - component: {fileID: 95137433285641532}
+  - component: {fileID: 114636867804634344}
   m_Layer: 0
   m_Name: SM_Prop_SecurityCamera_Arm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &404966
 Transform:
@@ -40,23 +42,23 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0.17607528, z: 0.43852392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4702942415546800}
   m_Father: {fileID: 496720}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &496720
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171464}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -8.5, y: 5.5, z: -94}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 1.1000019, y: 1.1, z: 1.1000019}
   m_Children:
   - {fileID: 404966}
   m_Father: {fileID: 0}
@@ -166,13 +168,12 @@ GameObject:
   - component: {fileID: 33921239073345972}
   - component: {fileID: 23666817941196284}
   - component: {fileID: 114405250469414956}
-  - component: {fileID: 114156318063777198}
   m_Layer: 0
   m_Name: FOV_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4702942415546800
 Transform:
@@ -201,7 +202,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18d6730b166536e4c9b7c58b21091e76, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -228,21 +229,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1399410319064306}
   m_Mesh: {fileID: 0}
---- !u!114 &114156318063777198
-MonoBehaviour:
+--- !u!95 &95137433285641532
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399410319064306}
+  m_GameObject: {fileID: 171464}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fovMeshMaterial: {fileID: 2100000, guid: 18d6730b166536e4c9b7c58b21091e76, type: 2}
-  normalColor: {r: 0.3147746, g: 0.9852941, b: 0.18836506, a: 0.216}
-  investigateColor: {r: 1, g: 0.8750507, b: 0.17647058, a: 0.216}
-  chaseColor: {r: 1, g: 0.29411763, b: 0.29411763, a: 0.216}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9175afe5aa3051b4aa2fc89c4bf9c70c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114405250469414956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,3 +270,19 @@ MonoBehaviour:
   edgeResolveIterations: 1
   edgeDstThreshold: 0.1
   viewMeshFilter: {fileID: 33921239073345972}
+--- !u!114 &114636867804634344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+  fovMeshMaterial: {fileID: 0}
+  normalColor: {r: 0, g: 1, b: 0.21379304, a: 0.21568628}
+  investigateColor: {r: 1, g: 0.80689657, b: 0, a: 0.21568628}
+  chaseColor: {r: 1, g: 0.04411763, b: 0.04411763, a: 0.21568628}

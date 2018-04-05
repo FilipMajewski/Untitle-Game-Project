@@ -98,9 +98,9 @@ public class PlayerController : MonoBehaviour
             falling = false;
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire1"))
         {
-
+            anim.SetTrigger("Crouched");
         }
 
         if (!inter.Hiden)
@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
             move.Normalize();
         }
 
-        if (move.magnitude <= 0.1f)
+        if (move.magnitude <= 0.3f)
         {
             move = Vector3.zero;
         }

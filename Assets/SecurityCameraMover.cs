@@ -15,9 +15,6 @@ public class SecurityCameraMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cameraToMove.localRotation.y == -90)
-        {
 
-        }
     }
 }
