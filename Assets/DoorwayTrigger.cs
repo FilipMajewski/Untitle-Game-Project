@@ -34,4 +34,20 @@ public class DoorwayTrigger : MonoBehaviour
             //cam.cullingMask |= (1 << 14);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            // Render everything *except* layer 14
+            //cam.cullingMask = ~(1 << 14);
+
+            // Switch off layer 14, leave others as-is
+            //cam.cullingMask &= ~(1 << 11);
+
+
+            // Switch on layer 14, leave others as-is
+            cam.cullingMask |= (1 << 11);
+        }
+    }
 }

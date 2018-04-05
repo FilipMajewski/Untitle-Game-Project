@@ -7,12 +7,49 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Shop
     100002: //RootNode
+    100004: door_left
+    100006: door_right
+    100008: shop_street_level
+    100010: shop_top_level
+    100012: window
+    100014: window1
+    100016: door_back
     400000: Shop
     400002: //RootNode
+    400004: door_left
+    400006: door_right
+    400008: shop_street_level
+    400010: shop_top_level
+    400012: window
+    400014: window1
+    400016: door_back
     2100000: lambert7
+    2100002: lambert1
+    2100004: Glass
     2300000: Shop
+    2300002: door_left
+    2300004: door_right
+    2300006: shop_street_level
+    2300008: shop_top_level
+    2300010: window
+    2300012: window1
+    2300014: door_back
     3300000: Shop
+    3300002: door_left
+    3300004: door_right
+    3300006: shop_street_level
+    3300008: shop_top_level
+    3300010: window
+    3300012: window1
+    3300014: door_back
     4300000: Shop
+    4300002: shop_street_level
+    4300004: window
+    4300006: window1
+    4300008: shop_top_level
+    4300010: door_right
+    4300012: door_left
+    4300014: door_back
   externalObjects: {}
   materials:
     importMaterials: 1
