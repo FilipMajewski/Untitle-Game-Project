@@ -1,0 +1,13 @@
+tree("Root")
+	parallel
+		repeat mute tree("Patrol")
+
+tree("Patrol")
+	fallback
+		tree("Wander")
+
+tree("Wander")
+	while not SeePlayer
+		sequence
+			PickDestination
+			MoveToDestination

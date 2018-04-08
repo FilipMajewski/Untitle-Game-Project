@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 move;
 
-    private bool falling;
+    private bool falling, crouched;
     private float horizontal, vertical, fallingTime, currentSpeed;
 
     #region Encapsulation
@@ -62,6 +62,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public bool Crouched
+    {
+        get
+        {
+            return crouched;
+        }
+
+        set
+        {
+            crouched = value;
+        }
+    }
+
     #endregion
 
     void Start()
@@ -71,6 +84,7 @@ public class PlayerController : MonoBehaviour
         inter = GetComponent<Interaction>();
         currentSpeed = maxMoveSpeed;
         falling = false;
+        crouched = false;
         fallingTime = 0;
     }
 
@@ -101,6 +115,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Crouched");
+            crouched = !crouched;
+            StealthManager.isBreakingLaw = !StealthManager.isBreakingLaw;
         }
 
         if (!inter.Hiden)
@@ -133,7 +149,15 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), rotationSmoothSpeed);
         }
 
-        cc.SimpleMove(move * currentSpeed);
+        if (crouched)
+        {
+            cc.SimpleMove(move * currentSpeed / 2);
+        }
+        else
+        {
+            cc.SimpleMove(move * currentSpeed);
+        }
+
     }
 
 

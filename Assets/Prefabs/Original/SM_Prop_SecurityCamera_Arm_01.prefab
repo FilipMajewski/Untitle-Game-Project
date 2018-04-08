@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23998110697019794}
   - component: {fileID: 95930117803795172}
   - component: {fileID: 114531383595227122}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Prop_SecurityCamera_Arm_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 33083338666139630}
   - component: {fileID: 23596906899362808}
   - component: {fileID: 114828048367975904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FOV_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4848600045843226}
   - component: {fileID: 33878801044342540}
   - component: {fileID: 23828412356411928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Prop_SecurityCamera_Head_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,9 +84,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618003539018564}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -24.757236, y: 4.734756, z: -104.14191}
-  m_LocalScale: {x: 1.1000019, y: 1.1, z: 1.1000019}
+  m_LocalScale: {x: 1.1000024, y: 1.1, z: 1.1000024}
   m_Children:
   - {fileID: 4848600045843226}
   m_Father: {fileID: 0}
@@ -262,6 +262,9 @@ MonoBehaviour:
   normalColor: {r: 0, g: 1, b: 0.21379304, a: 0.21568628}
   investigateColor: {r: 1, g: 0.80689657, b: 0, a: 0.21568628}
   chaseColor: {r: 1, g: 0.04411763, b: 0.04411763, a: 0.21568628}
+  lerpSpeed: 0.05
+  crouchedRadiusDivider: 2
+  isHuman: 0
   seeYou: 0
 --- !u!114 &114828048367975904
 MonoBehaviour:
