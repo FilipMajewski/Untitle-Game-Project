@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Element
   - FPS Counter
+  - AI
+  - Waypoint
   layers:
   - Default
   - TransparentFX

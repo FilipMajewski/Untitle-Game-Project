@@ -5,11 +5,11 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
 
-    public float viewRadius;
-    float currentViewRadius;
 
-    [Range(0, 360)]
-    public float viewAngle;
+    float visionRange;
+    float currentVisionRange;
+
+    float viewAngle;
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
@@ -24,27 +24,54 @@ public class FieldOfView : MonoBehaviour
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
 
-    public float CurrentViewRadius
+    public float CurrentVisionRange
     {
         get
         {
-            return currentViewRadius;
+            return currentVisionRange;
         }
 
         set
         {
-            currentViewRadius = value;
+            currentVisionRange = value;
+        }
+    }
+
+    public float VisionRange
+    {
+        get
+        {
+            return visionRange;
+        }
+
+        set
+        {
+            visionRange = value;
+        }
+    }
+
+    public float ViewAngle
+    {
+        get
+        {
+            return viewAngle;
+        }
+
+        set
+        {
+            viewAngle = value;
         }
     }
 
     void Start()
     {
-        currentViewRadius = viewRadius;
+        currentVisionRange = visionRange;
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
 
         StartCoroutine("FindTargetsWithDelay", .6f);
+        //StartCoroutine("DrawFieldOfViewWithDelay", 0.025f);
     }
 
 
@@ -57,6 +84,15 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    IEnumerator DrawFieldOfViewWithDelay(float delay)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(delay);
+            DrawFieldOfView();
+        }
+    }
+
     void LateUpdate()
     {
         DrawFieldOfView();
@@ -65,7 +101,7 @@ public class FieldOfView : MonoBehaviour
     void FindVisibleTargets()
     {
         visibleTargets.Clear();
-        Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, currentViewRadius, targetMask);
+        Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, currentVisionRange, targetMask);
 
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
@@ -175,13 +211,13 @@ public class FieldOfView : MonoBehaviour
         Vector3 dir = DirFromAngle(globalAngle, true);
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, dir, out hit, currentViewRadius, obstacleMask))
+        if (Physics.Raycast(transform.position, dir, out hit, currentVisionRange, obstacleMask))
         {
             return new ViewCastInfo(true, hit.point, hit.distance, globalAngle);
         }
         else
         {
-            return new ViewCastInfo(false, transform.position + dir * currentViewRadius, currentViewRadius, globalAngle);
+            return new ViewCastInfo(false, transform.position + dir * currentVisionRange, currentVisionRange, globalAngle);
         }
     }
 

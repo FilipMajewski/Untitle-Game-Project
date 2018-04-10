@@ -39,10 +39,11 @@ GameObject:
   - component: {fileID: 4549263946082316}
   - component: {fileID: 195900074891631974}
   - component: {fileID: 114378715899988040}
-  - component: {fileID: 114169259529240020}
+  - component: {fileID: 114094984334106534}
+  - component: {fileID: 95481612473247260}
   m_Layer: 10
   m_Name: Pedestrian
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1018047532449600}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: -109.5}
+  m_LocalPosition: {x: 0, y: -1, z: -131.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4121661832640232}
@@ -188,7 +189,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721643514588036}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114169259529240020
+--- !u!95 &95481612473247260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018047532449600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9033996684ecb294b922eb7d749e008d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114094984334106534
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -196,11 +214,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018047532449600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa4ab1b773b3794e9bf6cf18201dd39, type: 3}
+  m_Script: {fileID: 11500000, guid: ec14105974ca684478636826f051e563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathHolder: {fileID: 0}
-  loop: 0
 --- !u!114 &114296263252946956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,8 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b6edd1c7e2ea4c82da4beebd62d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 15
-  viewAngle: 170
   targetMask:
     serializedVersion: 2
     m_Bits: 256
@@ -236,14 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 07f572ce8e5744542be4500b51512976, type: 3}
-  fovMeshMaterial: {fileID: 0}
-  normalColor: {r: 0, g: 1, b: 0.21379304, a: 0.21568628}
-  investigateColor: {r: 1, g: 0.80689657, b: 0, a: 0.21568628}
-  chaseColor: {r: 1, g: 0.04411763, b: 0.04411763, a: 0.21568628}
-  lerpSpeed: 0.05
-  crouchedRadiusDivider: 1
-  isHuman: 1
+  _AI_Parameters: {fileID: 11400000, guid: 3f4c0edef4fff234e91fa50ebfea2b80, type: 2}
   seeYou: 0
   seeThatYouBreakinLaw: 0
 --- !u!136 &136994192415954694
@@ -268,11 +275,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 1.5
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 200
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

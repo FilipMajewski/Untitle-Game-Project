@@ -15,7 +15,7 @@ public class LineOfSight : MonoBehaviour
     void Start()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length != 0)
+        if (enemies.Length != 0 && enemies != null)
         {
 
             for (int i = 0; i < enemies.Length; i++)
@@ -30,7 +30,8 @@ public class LineOfSight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine("ShootRay");
+        if (enemies != null)
+            StartCoroutine("ShootRay");
     }
 
     IEnumerator ShootRay()
