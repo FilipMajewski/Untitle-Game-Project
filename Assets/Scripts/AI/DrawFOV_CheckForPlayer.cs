@@ -8,8 +8,7 @@ public class DrawFOV_CheckForPlayer : MonoBehaviour
     Renderer rend;
     Transform player;
     PlayerController playerController;
-
-    public SO_AI_Parameters _AI_Parameters;
+    AI_Setup _AI_Setup;
 
     Shader shader;
     Material fovMeshMaterial;
@@ -23,30 +22,25 @@ public class DrawFOV_CheckForPlayer : MonoBehaviour
 
     bool isCamera;
     bool isGuard;
+
     public bool seeYou;
     public bool seeThatYouBreakinLaw;
     public bool lookingForYou;
 
     private void Awake()
     {
-        shader = _AI_Parameters.shader;
-        fovMeshMaterial = _AI_Parameters.fovMeshMaterial;
-        normalColor = _AI_Parameters.normalColor;
-        investigateColor = _AI_Parameters.investigateColor;
-        chaseColor = _AI_Parameters.chaseColor;
-        lerpSpeed = _AI_Parameters.lerpSpeed;
-        crouchedRadiusDivider = _AI_Parameters.crouchedRadiusDivider;
-        isCamera = _AI_Parameters.isCamera;
-        isGuard = _AI_Parameters.isGuard;
+
     }
 
     void Start()
     {
+        SetupVision();
+
         view = GetComponentInChildren<FieldOfView>();
         rend = view.GetComponent<Renderer>();
 
-        view.VisionRange = _AI_Parameters.visionRange;
-        view.ViewAngle = _AI_Parameters.visionAngle;
+        view.VisionRange = _AI_Setup.parameters.visionRange;
+        view.ViewAngle = _AI_Setup.parameters.visionAngle;
 
         fovMeshMaterial = new Material(shader)
         {
@@ -160,5 +154,18 @@ public class DrawFOV_CheckForPlayer : MonoBehaviour
 
     }
 
+    void SetupVision()
+    {
+        _AI_Setup = GetComponent<AI_Setup>();
 
+        shader = _AI_Setup.parameters.shader;
+        fovMeshMaterial = _AI_Setup.parameters.fovMeshMaterial;
+        normalColor = _AI_Setup.parameters.normalColor;
+        investigateColor = _AI_Setup.parameters.investigateColor;
+        chaseColor = _AI_Setup.parameters.chaseColor;
+        lerpSpeed = _AI_Setup.parameters.lerpSpeed;
+        crouchedRadiusDivider = _AI_Setup.parameters.crouchedRadiusDivider;
+        isCamera = _AI_Setup.parameters.isCamera;
+        isGuard = _AI_Setup.parameters.isGuard;
+    }
 }

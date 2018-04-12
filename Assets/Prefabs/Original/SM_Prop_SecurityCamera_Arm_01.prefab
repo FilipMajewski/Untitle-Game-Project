@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4486379171016076}
   - component: {fileID: 33809422568411360}
   - component: {fileID: 23998110697019794}
+  - component: {fileID: 114439865676731776}
   - component: {fileID: 95930117803795172}
   - component: {fileID: 114531383595227122}
   m_Layer: 10
@@ -98,14 +99,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1962465662756912}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.17607528, z: 0.43852392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4181132998477844}
   m_Father: {fileID: 4486379171016076}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23596906899362808
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -246,6 +247,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114439865676731776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618003539018564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec14105974ca684478636826f051e563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameters: {fileID: 11400000, guid: 84a994e0bfdf0844a9b2f74148800b42, type: 2}
 --- !u!114 &114531383595227122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,9 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _AI_Parameters: {fileID: 11400000, guid: 84a994e0bfdf0844a9b2f74148800b42, type: 2}
   seeYou: 0
   seeThatYouBreakinLaw: 0
+  lookingForYou: 0
 --- !u!114 &114828048367975904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,8 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b6edd1c7e2ea4c82da4beebd62d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 15
-  viewAngle: 45
   targetMask:
     serializedVersion: 2
     m_Bits: 256

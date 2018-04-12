@@ -250,9 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _AI_Parameters: {fileID: 11400000, guid: 3f4c0edef4fff234e91fa50ebfea2b80, type: 2}
+  _AI_Parameters: {fileID: 11400000, guid: dc98f1e389095fa46b44c412106444b9, type: 2}
   seeYou: 0
   seeThatYouBreakinLaw: 0
+  lookingForYou: 0
 --- !u!136 &136994192415954694
 CapsuleCollider:
   m_ObjectHideFlags: 1

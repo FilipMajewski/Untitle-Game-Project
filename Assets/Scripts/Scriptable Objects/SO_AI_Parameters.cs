@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SO_AI_Parameters : ScriptableObject
 {
+    [Header("Vision Parameters")]
     public Shader shader;
     public Material fovMeshMaterial;
 
@@ -21,7 +22,17 @@ public class SO_AI_Parameters : ScriptableObject
     public float lerpSpeed;
     public float crouchedRadiusDivider;
 
+    [Header("AI Type")]
     public bool isCamera;
     public bool isGuard;
 
+    [Header("AI Parameters")]
+
+    float lookingTime;
+
+    [Header("Navigation Parameters")]
+    public float maxSpeed;
+
+    [Range(0, 360)]
+    public float turnSpeed;
 }

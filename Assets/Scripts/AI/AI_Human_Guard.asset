@@ -20,5 +20,7 @@ MonoBehaviour:
   chaseColor: {r: 1, g: 0, b: 0, a: 0.21568628}
   lerpSpeed: 0.05
   crouchedRadiusDivider: 2
-  isCamera: 1
+  isCamera: 0
   isGuard: 1
+  maxSpeed: 1
+  turnSpeed: 170
