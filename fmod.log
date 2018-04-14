@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000F92E4B98 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000006ECA57E8 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -24,47 +24,35 @@
 [LOG] SystemI::createSound                     : filename = I:\Music\FMOD studio projects\Untitled Game Project\untitled game project\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 00000000A2EFD258 : node = 000000012B281570
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000A9D7AAF8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000A2EFD258
+[LOG] SystemI::createSound                     : setdata soundi = 00000000DE140298 : node = 0000000136E74210
+[LOG] SystemI::createSound                     : add node to async list : head = 00000001051D50E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000DE140298
 [LOG] SystemI::createSoundInternal             :     Create name='I:\Music\FMOD studio projects\Untitled Game Project\untitled game project\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000012B281688
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000136E74328
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Amb_Nature_L', format=2, channels=2, frequency=48000, lengthbytes=1043520, lengthpcm=3912844, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.021027.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000A2EFD258
-[LOG] SoundI::getSubSound                      : sound 00000000A2EFD258.  Subsound index 0 / 1
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000135F5D5B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000135F5D5B8
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000135F5D5B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000135F5D5B8
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000135F5D5B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000135F5D5B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000DE140298
+[LOG] SoundI::getSubSound                      : sound 00000000DE140298.  Subsound index 0 / 1
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 39', format=2, channels=2, frequency=48000, lengthbytes=4288, lengthpcm=17563, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.059570.
@@ -73,14 +61,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 8', format=2, channels=2, frequency=48000, lengthbytes=3776, lengthpcm=15681, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.074799.
@@ -89,14 +77,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 10', format=2, channels=2, frequency=48000, lengthbytes=2592, lengthpcm=11291, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.060883.
@@ -105,14 +93,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 30', format=2, channels=2, frequency=48000, lengthbytes=3392, lengthpcm=13172, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.050476.
@@ -121,14 +109,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 4', format=2, channels=2, frequency=48000, lengthbytes=4320, lengthpcm=18190, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.112915.
@@ -137,14 +125,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 5', format=2, channels=2, frequency=48000, lengthbytes=3392, lengthpcm=13172, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.083710.
@@ -153,14 +141,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 12', format=2, channels=2, frequency=48000, lengthbytes=3968, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.150391.
@@ -169,14 +157,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 36', format=2, channels=2, frequency=48000, lengthbytes=3712, lengthpcm=14426, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.117798.
@@ -185,14 +173,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 16', format=2, channels=2, frequency=48000, lengthbytes=3392, lengthpcm=12545, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.088074.
@@ -201,14 +189,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 3', format=2, channels=2, frequency=48000, lengthbytes=3680, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.040466.
@@ -217,14 +205,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 24', format=2, channels=2, frequency=48000, lengthbytes=3744, lengthpcm=14427, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.057190.
@@ -233,14 +221,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 2', format=2, channels=2, frequency=48000, lengthbytes=4160, lengthpcm=17877, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.066071.
@@ -249,14 +237,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 28', format=2, channels=2, frequency=48000, lengthbytes=3328, lengthpcm=13799, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.182404.
@@ -265,14 +253,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 37', format=2, channels=2, frequency=48000, lengthbytes=3264, lengthpcm=11918, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.105621.
@@ -281,14 +269,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 33', format=2, channels=2, frequency=48000, lengthbytes=3584, lengthpcm=13799, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.083221.
@@ -297,14 +285,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 23', format=2, channels=2, frequency=48000, lengthbytes=4160, lengthpcm=16935, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.099823.
@@ -313,14 +301,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 15', format=2, channels=2, frequency=48000, lengthbytes=4416, lengthpcm=16936, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.135223.
@@ -329,14 +317,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 20', format=2, channels=2, frequency=48000, lengthbytes=4096, lengthpcm=16935, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058441.
@@ -345,14 +333,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 31', format=2, channels=2, frequency=48000, lengthbytes=4224, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.196228.
@@ -361,14 +349,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 40', format=2, channels=2, frequency=48000, lengthbytes=4064, lengthpcm=16935, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.052887.
@@ -377,14 +365,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 38', format=2, channels=2, frequency=48000, lengthbytes=2976, lengthpcm=12545, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.105957.
@@ -393,14 +381,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 22', format=2, channels=2, frequency=48000, lengthbytes=3616, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069550.
@@ -409,14 +397,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 21', format=2, channels=2, frequency=48000, lengthbytes=3136, lengthpcm=11918, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.071259.
@@ -425,14 +413,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 11', format=2, channels=2, frequency=48000, lengthbytes=4096, lengthpcm=15681, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.113922.
@@ -441,14 +429,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 27', format=2, channels=2, frequency=48000, lengthbytes=3264, lengthpcm=12545, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063049.
@@ -457,14 +445,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 41', format=2, channels=2, frequency=48000, lengthbytes=4672, lengthpcm=18190, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.241608.
@@ -473,14 +461,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 34', format=2, channels=2, frequency=48000, lengthbytes=3968, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.599884.
@@ -489,14 +477,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 9', format=2, channels=2, frequency=48000, lengthbytes=3328, lengthpcm=14426, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.123596.
@@ -505,14 +493,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 26', format=2, channels=2, frequency=48000, lengthbytes=3456, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.117218.
@@ -521,14 +509,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 32', format=2, channels=2, frequency=48000, lengthbytes=3744, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044220.
@@ -537,14 +525,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 6', format=2, channels=2, frequency=48000, lengthbytes=2912, lengthpcm=11918, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044495.
@@ -553,14 +541,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 35', format=2, channels=2, frequency=48000, lengthbytes=3552, lengthpcm=14427, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.613403.
@@ -569,14 +557,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 19', format=2, channels=2, frequency=48000, lengthbytes=2656, lengthpcm=8782, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.028046.
@@ -585,14 +573,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 17', format=2, channels=2, frequency=48000, lengthbytes=2752, lengthpcm=10663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.096619.
@@ -601,14 +589,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 13', format=2, channels=2, frequency=48000, lengthbytes=3168, lengthpcm=13172, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.037872.
@@ -617,14 +605,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 29', format=2, channels=2, frequency=48000, lengthbytes=3712, lengthpcm=14427, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114655.
@@ -633,14 +621,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 14', format=2, channels=2, frequency=48000, lengthbytes=2944, lengthpcm=12544, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.052399.
@@ -649,14 +637,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 42', format=2, channels=2, frequency=48000, lengthbytes=2848, lengthpcm=10664, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.117126.
@@ -665,14 +653,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 18', format=2, channels=2, frequency=48000, lengthbytes=1600, lengthpcm=5645, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.084778.
@@ -681,14 +669,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 7', format=2, channels=2, frequency=48000, lengthbytes=3680, lengthpcm=15054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.146240.
@@ -697,14 +685,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 1', format=2, channels=2, frequency=48000, lengthbytes=3264, lengthpcm=13800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.074829.
@@ -713,112 +701,104 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1693984
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 32128
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000179A5F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000011F47F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD06465EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD06465E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD06465F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD06466040
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000C21D4B48
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9A5485EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9A5485E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9A5485F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9A5486040
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000014885EB78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps_Run_Boots_Leaves_Dirt_Track 25', format=2, channels=2, frequency=48000, lengthbytes=3744, lengthpcm=14427, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.107758.
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000135F5D5B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000135F5D5B8
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000135F5D5B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000135F5D5B8
-[LOG] SoundI::release                          : Amb_Nature_L (00000000A2EFD258)
-[LOG] SoundI::release                          :     Amb_Nature_L (00000000A9D7A668)
-[LOG] SoundI::release                          :     Amb_Nature_L (0000000135F5D5B8)
-[LOG] SoundI::release                          :  (0000000113A66BE8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 1 (00000000AA877DE8)
-[LOG] SoundI::release                          :  (0000000136DFAE08)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 10 (00000000A9D79968)
-[LOG] SoundI::release                          :  (0000000136DFB3C8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 11 (0000000110855088)
-[LOG] SoundI::release                          :  (0000000136DF9E38)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 12 (00000000A9D7A4C8)
-[LOG] SoundI::release                          :  (0000000113A64AD8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 13 (0000000072B2B8B8)
-[LOG] SoundI::release                          :  (0000000113A64518)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 14 (0000000072B2C0D8)
-[LOG] SoundI::release                          :  (0000000136DF8738)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 15 (0000000110853688)
-[LOG] SoundI::release                          :  (0000000136DF92B8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 16 (00000000A9D79B08)
-[LOG] SoundI::release                          :  (0000000136DF8FD8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 17 (0000000072B2C758)
-[LOG] SoundI::release                          :  (0000000113A664B8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 18 (0000000072B2CA98)
-[LOG] SoundI::release                          :  (0000000136DF8CF8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 19 (0000000072B2B578)
-[LOG] SoundI::release                          :  (0000000136DFA288)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 2 (00000000A9D7AE88)
-[LOG] SoundI::release                          :  (0000000136DFA568)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 20 (0000000110854868)
-[LOG] SoundI::release                          :  (0000000136DFB258)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 21 (0000000110855228)
-[LOG] SoundI::release                          :  (0000000136DFAB28)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 22 (0000000110853B68)
-[LOG] SoundI::release                          :  (0000000136DF9428)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 23 (00000000A9D7B1C8)
-[LOG] SoundI::release                          :  (0000000136DF85C8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 24 (00000000A9D79CA8)
-[LOG] SoundI::release                          :  (0000000113A64C48)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 25 (000000000017FB18)
-[LOG] SoundI::release                          :  (0000000136DFBDD8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 26 (0000000072B2BD98)
-[LOG] SoundI::release                          :  (0000000136DF8B88)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 27 (0000000110853D08)
-[LOG] SoundI::release                          :  (0000000136DFB988)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 28 (00000000A9D79E48)
-[LOG] SoundI::release                          :  (0000000113A63DE8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 29 (0000000072B2BF38)
-[LOG] SoundI::release                          :  (0000000136DFA118)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 3 (00000000A9D7B368)
-[LOG] SoundI::release                          :  (0000000136DFAF78)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 30 (00000000A9D7A328)
-[LOG] SoundI::release                          :  (0000000136DFA6D8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 31 (0000000110853EA8)
-[LOG] SoundI::release                          :  (0000000136DFC228)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 32 (0000000072B2C5B8)
-[LOG] SoundI::release                          :  (0000000136DFB0E8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 33 (00000000A9D7B028)
-[LOG] SoundI::release                          :  (0000000136DFC0B8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 34 (0000000110854048)
-[LOG] SoundI::release                          :  (0000000136DF8A18)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 35 (0000000072B2CC38)
-[LOG] SoundI::release                          :  (0000000136DF9FA8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 36 (00000000A9D7ACE8)
-[LOG] SoundI::release                          :  (0000000136DFB818)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 37 (00000000A9D7A188)
-[LOG] SoundI::release                          :  (0000000136DFA9B8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 38 (00000001108539C8)
-[LOG] SoundI::release                          :  (0000000136DFBF48)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 39 (00000000A9D7AB48)
-[LOG] SoundI::release                          :  (0000000136DF9CC8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 4 (00000000A9D7B508)
-[LOG] SoundI::release                          :  (0000000136DFA848)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 40 (0000000110854388)
-[LOG] SoundI::release                          :  (0000000136DFBAF8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 41 (00000001108534E8)
-[LOG] SoundI::release                          :  (0000000113A65378)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 42 (0000000072B2C8F8)
-[LOG] SoundI::release                          :  (0000000136DFA3F8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 5 (00000000A9D7A808)
-[LOG] SoundI::release                          :  (0000000136DF88A8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 6 (0000000072B2CF78)
-[LOG] SoundI::release                          :  (0000000113A66068)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 7 (00000000AA878468)
-[LOG] SoundI::release                          :  (0000000136DF99E8)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 8 (00000000A9D79FE8)
-[LOG] SoundI::release                          :  (0000000136DFBC68)
-[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 9 (0000000110854528)
+[LOG] SoundI::release                          : Amb_Nature_L (00000000DE140298)
+[LOG] SoundI::release                          :     Amb_Nature_L (00000001051D4AB8)
+[LOG] SoundI::release                          :     Amb_Nature_L (00000000795877B8)
+[LOG] SoundI::release                          :  (00000000ED301448)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 1 (00000001383D00C8)
+[LOG] SoundI::release                          :  (00000000FB203668)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 10 (00000001051D5478)
+[LOG] SoundI::release                          :  (0000000138DFDF98)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 11 (00000000A618A908)
+[LOG] SoundI::release                          :  (00000000FB2044C8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 12 (00000001051D5958)
+[LOG] SoundI::release                          :  (00000000ED2FFA68)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 13 (00000001383D0268)
+[LOG] SoundI::release                          :  (00000000ED3005E8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 14 (00000001383D12A8)
+[LOG] SoundI::release                          :  (0000000138DFDB48)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 15 (00000000A5C8FE08)
+[LOG] SoundI::release                          :  (000000009607DC98)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 16 (00000001051D4438)
+[LOG] SoundI::release                          :  (0000000138DFD2A8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 17 (00000001383D0A88)
+[LOG] SoundI::release                          :  (00000000ED2FEC08)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 18 (00000001383D1AC8)
+[LOG] SoundI::release                          :  (0000000138DFD418)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 19 (00000001383D1928)
+[LOG] SoundI::release                          :  (00000000FCA8A428)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 2 (00000001051D4778)
+[LOG] SoundI::release                          :  (0000000138DFE9A8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 20 (00000000A5C902E8)
+[LOG] SoundI::release                          :  (0000000138DFEDF8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 21 (00000000A618AAA8)
+[LOG] SoundI::release                          :  (0000000138DFDE28)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 22 (00000000A618A768)
+[LOG] SoundI::release                          :  (0000000138DFE558)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 23 (00000000A5C8FC68)
+[LOG] SoundI::release                          :  (00000000F134DFE8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 24 (00000001051D45D8)
+[LOG] SoundI::release                          :  (00000000ED3015B8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 25 (00000001383D0408)
+[LOG] SoundI::release                          :  (0000000138DFD588)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 26 (00000001383D1788)
+[LOG] SoundI::release                          :  (0000000138DFE108)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 27 (000000005125DB68)
+[LOG] SoundI::release                          :  (0000000138DFE3E8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 28 (00000001051D4918)
+[LOG] SoundI::release                          :  (00000000ED301898)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 29 (00000001383D15E8)
+[LOG] SoundI::release                          :  (000000009607DB28)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 3 (00000001051D52D8)
+[LOG] SoundI::release                          :  (00000000FB203AB8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 30 (00000001051D57B8)
+[LOG] SoundI::release                          :  (0000000138DFD868)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 31 (00000000A5C90628)
+[LOG] SoundI::release                          :  (0000000138DFEB18)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 32 (00000001383D1108)
+[LOG] SoundI::release                          :  (0000000138DFE6C8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 33 (00000001051D3F58)
+[LOG] SoundI::release                          :  (0000000138DFD9D8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 34 (000000005125E1E8)
+[LOG] SoundI::release                          :  (0000000138DFEF68)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 35 (00000001383D0F68)
+[LOG] SoundI::release                          :  (000000009607D9B8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 36 (00000001051D3DB8)
+[LOG] SoundI::release                          :  (0000000138DFE838)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 37 (00000001051D5AF8)
+[LOG] SoundI::release                          :  (0000000138DFE278)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 38 (00000000A618B468)
+[LOG] SoundI::release                          :  (00000000FB205048)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 39 (00000001051D4298)
+[LOG] SoundI::release                          :  (00000000FB2037D8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 4 (00000001051D5138)
+[LOG] SoundI::release                          :  (0000000138DFDCB8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 40 (00000000A5C90488)
+[LOG] SoundI::release                          :  (0000000138DFD6F8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 41 (000000005125E048)
+[LOG] SoundI::release                          :  (00000000ED2FFD48)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 42 (00000001383D1448)
+[LOG] SoundI::release                          :  (00000000FB203D98)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 5 (00000001051D40F8)
+[LOG] SoundI::release                          :  (0000000138DFEC88)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 6 (00000001383D08E8)
+[LOG] SoundI::release                          :  (00000000ED300D18)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 7 (00000001383D1E08)
+[LOG] SoundI::release                          :  (00000000FB2041E8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 8 (00000001051D4DF8)
+[LOG] SoundI::release                          :  (0000000138DFF0D8)
+[LOG] SoundI::release                          :     Footsteps_Run_Boots_Leaves_Dirt_Track 9 (00000001383D1C68)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

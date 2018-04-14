@@ -5,24 +5,35 @@ using UnityEngine.AI;
 
 public class AI_Base : StateMachineBehaviour
 {
+    [HideInInspector]
     public GameObject npc;
+    [HideInInspector]
     public DrawFOV_CheckForPlayer fov;
+    [HideInInspector]
     public NavMeshAgent agent;
-
-    public GameObject[] waypoints;
+    [HideInInspector]
     public GameObject player;
+    [HideInInspector]
     public NavMeshHit hit;
+    [HideInInspector]
+    public GameObject[] waypoints;
+    [HideInInspector]
+    public float lookingRadius;
+    [HideInInspector]
+    public bool calledToSearchPlayer;
 
     private void Awake()
     {
-        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         npc = animator.gameObject;
+        waypoints = npc.GetComponent<AI_Setup>().waypoints;
+        lookingRadius = npc.GetComponent<AI_Setup>().lookingRadius;
         fov = npc.GetComponent<DrawFOV_CheckForPlayer>();
         agent = npc.GetComponent<NavMeshAgent>();
     }

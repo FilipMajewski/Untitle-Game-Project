@@ -8,6 +8,9 @@ TagManager:
   - FPS Counter
   - AI
   - Waypoint
+  - AI_Guard
+  - AI_Camera
+  - AI_Pedestrian
   layers:
   - Default
   - TransparentFX

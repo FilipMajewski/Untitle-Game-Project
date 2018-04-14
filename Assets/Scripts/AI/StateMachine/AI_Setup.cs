@@ -10,6 +10,13 @@ public class AI_Setup : MonoBehaviour
     Animator anim;
     DrawFOV_CheckForPlayer fov;
     NavMeshAgent agent;
+    [HideInInspector]
+    public Vector3 sawPlayerAtThisPosition;
+    [HideInInspector]
+    public float lookingRadius;
+    [HideInInspector]
+    public bool calledToSearchPlayer;
+    public GameObject[] waypoints;
 
     // Use this for initialization
     void Start()
@@ -17,6 +24,8 @@ public class AI_Setup : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         fov = GetComponent<DrawFOV_CheckForPlayer>();
+        lookingRadius = parameters.lookingRadius;
+        calledToSearchPlayer = false;
     }
 
     // Update is called once per frame
@@ -24,6 +33,8 @@ public class AI_Setup : MonoBehaviour
     {
         anim.SetBool("SeePlayer", fov.seeYou);
         anim.SetBool("SeeLawBreaking", fov.seeThatYouBreakinLaw);
+
+        Debug.Log("Called to search player " + calledToSearchPlayer);
     }
 
     void FeedNavAgent()

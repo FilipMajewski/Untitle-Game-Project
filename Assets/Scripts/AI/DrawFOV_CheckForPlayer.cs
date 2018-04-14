@@ -80,7 +80,9 @@ public class DrawFOV_CheckForPlayer : MonoBehaviour
         }
         else
         {
-            if (lookingForYou)
+            if (lookingForYou || StealthManager.globaLookingForPlayer && isCamera
+                || StealthManager.globaLookingForPlayer && isGuard
+                || _AI_Setup.calledToSearchPlayer && isGuard)
             {
                 if (fovMeshMaterial.GetColor("_Color") != investigateColor)
                 {

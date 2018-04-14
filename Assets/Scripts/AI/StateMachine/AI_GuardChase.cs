@@ -8,6 +8,7 @@ public class AI_GuardChase : AI_Base
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         StealthManager.isBreakingLaw = true;
+        StealthManager.globaLookingForPlayer = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -21,6 +22,7 @@ public class AI_GuardChase : AI_Base
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         StealthManager.isBreakingLaw = false;
+        StealthManager.globaLookingForPlayer = false;
     }
 
 }

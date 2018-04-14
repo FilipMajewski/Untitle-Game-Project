@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class AI_Base_NoNavMeshAgent : StateMachineBehaviour
 {
+    [HideInInspector]
     public GameObject npc;
+    [HideInInspector]
     public DrawFOV_CheckForPlayer fov;
-
+    [HideInInspector]
     public GameObject player;
-
+    [HideInInspector]
+    public GameObject[] guards;
+    [HideInInspector]
     public float rotation;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
+        guards = GameObject.FindGameObjectsWithTag("AI_Guard");
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

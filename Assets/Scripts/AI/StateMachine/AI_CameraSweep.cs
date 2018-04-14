@@ -39,7 +39,7 @@ public class AI_CameraSweep : AI_Base_NoNavMeshAgent
             Quaternion newRotation = Quaternion.RotateTowards(
                              currentRotation,
                              targetRotation,
-                             25 * Time.deltaTime);
+                             15 * Time.deltaTime);
 
             npc.transform.GetChild(0).localRotation = newRotation;
 

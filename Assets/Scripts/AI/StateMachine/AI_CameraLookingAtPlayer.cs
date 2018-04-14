@@ -17,10 +17,15 @@ public class AI_CameraLookingAtPlayer : AI_Base_NoNavMeshAgent
         Vector3 targetPoint = new Vector3(player.transform.position.x, npc.transform.position.y,
             player.transform.position.z) - npc.transform.position;
 
-        Quaternion targetRotation = Quaternion.LookRotation(-targetPoint, Vector3.up);
+        Quaternion targetRotation = Quaternion.LookRotation(targetPoint, Vector3.up);
 
-        npc.transform.GetChild(0).localRotation = Quaternion.Slerp(npc.transform.GetChild(0).localRotation,
+        npc.transform.GetChild(0).rotation = Quaternion.Slerp(npc.transform.GetChild(0).rotation,
             targetRotation, Time.deltaTime * 2.0f);
+
+        if (StealthManager.globaLookingForPlayer)
+        {
+            animator.SetBool("SeeLawBreaking", true);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

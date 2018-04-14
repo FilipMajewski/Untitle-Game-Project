@@ -15,10 +15,13 @@ MonoBehaviour:
   fovMeshMaterial: {fileID: 0}
   visionRange: 10
   visionAngle: 45
-  normalColor: {r: 0, g: 1, b: 0, a: 0.21568628}
-  investigateColor: {r: 1, g: 0.76551723, b: 0, a: 0.21568628}
-  chaseColor: {r: 1, g: 0, b: 0, a: 0.21568628}
+  normalColor: {r: 0, g: 0.5034485, b: 1, a: 0.15686275}
+  investigateColor: {r: 1, g: 0.76551723, b: 0, a: 0.15686275}
+  chaseColor: {r: 1, g: 0, b: 0, a: 0.15686275}
   lerpSpeed: 0.05
   crouchedRadiusDivider: 2
   isCamera: 1
   isGuard: 0
+  maxSpeed: 0
+  turnSpeed: 0
+  lookingRadius: 0

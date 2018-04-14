@@ -35,4 +35,5 @@ public class SO_AI_Parameters : ScriptableObject
 
     [Range(0, 360)]
     public float turnSpeed;
+    public float lookingRadius;
 }

@@ -30,7 +30,7 @@ namespace O3DWB
             if (destChildren.Count != sourceChildren.Count) return;
 
             // Note: Assumes there will always be a 1 to 1 mapping between the children in the hierarchy. 
-            for(int childIndex = 0; childIndex < destChildren.Count; ++childIndex)
+            for (int childIndex = 0; childIndex < destChildren.Count; ++childIndex)
             {
                 destChildren[childIndex].transform.InheritWorldTransformFrom(sourceChildren[childIndex].transform);
             }
@@ -71,7 +71,7 @@ namespace O3DWB
         {
             objectRayHit = null;
             OrientedBox objectWorldOrientedBox = gameObject.GetWorldOrientedBox();
-        
+
             OrientedBoxRayHit objectBoxRayHit;
             if (objectWorldOrientedBox.Raycast(ray, out objectBoxRayHit))
                 objectRayHit = new GameObjectRayHit(ray, gameObject, objectBoxRayHit, null, null, null);
@@ -89,7 +89,7 @@ namespace O3DWB
             OrientedBox objectWorldOrientedBox = gameObject.GetWorldOrientedBox();
 
             OrientedBoxRayHit objectBoxRayHit;
-            if(objectWorldOrientedBox.Raycast(ray, out objectBoxRayHit))
+            if (objectWorldOrientedBox.Raycast(ray, out objectBoxRayHit))
             {
                 SpriteRayHit spriteHit = new SpriteRayHit(ray, objectBoxRayHit.HitEnter, spriteRenderer, objectBoxRayHit.HitPoint, objectBoxRayHit.HitNormal);
                 objectRayHit = new GameObjectRayHit(ray, gameObject, null, null, null, spriteHit);
@@ -135,7 +135,7 @@ namespace O3DWB
         public static void SetHierarchyStatic(this GameObject hierarchyRoot, bool isStatic)
         {
             List<GameObject> allChildren = hierarchyRoot.GetAllChildrenIncludingSelf();
-            foreach(GameObject child in allChildren)
+            foreach (GameObject child in allChildren)
             {
                 child.isStatic = isStatic;
             }
@@ -201,7 +201,9 @@ namespace O3DWB
         public static void SetSelectedHierarchyWireframeHidden(this GameObject hierarchyRoot, bool isWireframeHidden)
         {
             Renderer renderer = hierarchyRoot.GetComponent<Renderer>();
+#pragma warning disable CS0618 // Type or member is obsolete
             if (renderer != null) EditorUtility.SetSelectedWireframeHidden(renderer, isWireframeHidden);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Transform gameObjectTransform = hierarchyRoot.transform;
             for (int childIndex = 0; childIndex < gameObjectTransform.childCount; ++childIndex)
@@ -213,7 +215,7 @@ namespace O3DWB
         public static bool DoesHierarchyContainMesh(this GameObject root)
         {
             List<GameObject> allChildrenIncludingSelf = root.GetAllChildrenIncludingSelf();
-            foreach(GameObject gameObject in allChildrenIncludingSelf)
+            foreach (GameObject gameObject in allChildrenIncludingSelf)
             {
                 if (gameObject.HasMesh()) return true;
             }
@@ -284,7 +286,7 @@ namespace O3DWB
 
         public static void AttachChildren(this GameObject gameObject, List<GameObject> children, bool allowUndoRedo)
         {
-            if(allowUndoRedo)
+            if (allowUndoRedo)
             {
                 Transform objectTransform = gameObject.transform;
                 UndoEx.RecordForToolAction(objectTransform);
@@ -322,7 +324,7 @@ namespace O3DWB
             Transform[] allChildTransforms = gameObject.GetComponentsInChildren<Transform>(true);
 
             var allChildren = new List<GameObject>();
-            foreach(Transform childTransform in allChildTransforms)
+            foreach (Transform childTransform in allChildTransforms)
             {
                 if (objectTransform != childTransform) allChildren.Add(childTransform.gameObject);
             }
@@ -355,7 +357,7 @@ namespace O3DWB
 
             List<Transform> immediateChildTransforms = objectTransform.GetImmediateChildTransforms();
 
-            if(allowUndoRedo)
+            if (allowUndoRedo)
             {
                 foreach (Transform childTransform in immediateChildTransforms)
                 {
@@ -460,7 +462,7 @@ namespace O3DWB
 
         public static OrientedBox GetHierarchyWorldOrientedBox(this GameObject hierarchyRoot)
         {
-            OrientedBox hierarchyWorldOrientedBox = hierarchyRoot.GetHierarchyModelSpaceOrientedBox();           
+            OrientedBox hierarchyWorldOrientedBox = hierarchyRoot.GetHierarchyModelSpaceOrientedBox();
             hierarchyWorldOrientedBox.Transform(hierarchyRoot.transform);
 
             return hierarchyWorldOrientedBox;
@@ -504,7 +506,7 @@ namespace O3DWB
                         rootRelativeTransformMatrix.Scale = rootRelativeTransformMatrix.Scale.GetVectorWithPositiveComponents();
 
                         childModelSpaceBox = childModelSpaceBox.Transform(rootRelativeTransformMatrix);
-                   
+
                         if (hierarchyModelSpaceBox.IsValid()) hierarchyModelSpaceBox.Encapsulate(childModelSpaceBox);
                         else hierarchyModelSpaceBox = new Box(childModelSpaceBox);
                     }
@@ -571,7 +573,7 @@ namespace O3DWB
         public static OrientedBox GetNonMeshWorldOrientedBox(this GameObject gameObject)
         {
             SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-            if(spriteRenderer != null)
+            if (spriteRenderer != null)
             {
                 return new OrientedBox(spriteRenderer.GetModelSpaceBox(), gameObject.transform);
             }
@@ -606,7 +608,7 @@ namespace O3DWB
 
             mesh = gameObject.GetMeshFromSkinnedMeshRenderer();
             if (mesh != null) return new OrientedBox(new Box(gameObject.GetComponent<SkinnedMeshRenderer>().localBounds), Quaternion.identity);
-          
+
             return OrientedBox.GetInvalid();
         }
 
@@ -688,7 +690,7 @@ namespace O3DWB
 
                 foreach (GameObject potentialParent in gameObjects)
                 {
-                    if (gameObject != potentialParent && 
+                    if (gameObject != potentialParent &&
                         gameObjectTransform.IsChildOf(potentialParent.transform))
                     {
                         foundParentForThisObject = true;
@@ -705,7 +707,7 @@ namespace O3DWB
         public static List<GameObject> GetAllObjectsInHierarchyCollection(List<GameObject> hierarchyRoots)
         {
             var allGameObjects = new List<GameObject>(hierarchyRoots.Count);
-            foreach(GameObject root in hierarchyRoots)
+            foreach (GameObject root in hierarchyRoots)
             {
                 allGameObjects.AddRange(root.GetAllChildrenIncludingSelf());
             }
@@ -722,7 +724,7 @@ namespace O3DWB
         public static List<Transform> GetObjectTransforms(IEnumerable<GameObject> gameObjects)
         {
             var objectTransforms = new List<Transform>();
-            foreach(GameObject gameObject in gameObjects)
+            foreach (GameObject gameObject in gameObjects)
             {
                 objectTransforms.Add(gameObject.transform);
             }
@@ -746,7 +748,7 @@ namespace O3DWB
 
         public static void SetSelectedHierarchyWireframeHidden(List<GameObject> hierarchyRoots, bool isWireframeHidden)
         {
-            foreach(GameObject root in hierarchyRoots)
+            foreach (GameObject root in hierarchyRoots)
             {
                 root.SetSelectedHierarchyWireframeHidden(isWireframeHidden);
             }
@@ -754,7 +756,7 @@ namespace O3DWB
 
         public static void AssignGameObjectsToLayer(List<GameObject> gameObjects, int objectLayer, bool allowUndoRedo)
         {
-            if(allowUndoRedo)
+            if (allowUndoRedo)
             {
                 foreach (GameObject gameObject in gameObjects)
                 {
@@ -776,7 +778,7 @@ namespace O3DWB
             if (gameObjects.Count == 0) return new List<GameObject>();
 
             var objectsWithMesh = new List<GameObject>(gameObjects.Count);
-            foreach(var gameObject in gameObjects)
+            foreach (var gameObject in gameObjects)
             {
                 if (gameObject.HasMesh()) objectsWithMesh.Add(gameObject);
             }

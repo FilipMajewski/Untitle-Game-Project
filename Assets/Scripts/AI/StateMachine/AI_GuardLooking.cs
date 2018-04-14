@@ -14,6 +14,7 @@ public class AI_GuardLooking : AI_Base
         secondsForLooking = 15.0f;
         animator.SetFloat("LookingTime", secondsForLooking);
         fov.lookingForYou = true;
+        StealthManager.globaLookingForPlayer = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -24,7 +25,7 @@ public class AI_GuardLooking : AI_Base
 
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            agent.destination = RandomNavmeshLocation(5f);
+            agent.destination = RandomNavmeshLocation(lookingRadius);
         }
     }
 
@@ -32,6 +33,7 @@ public class AI_GuardLooking : AI_Base
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         fov.lookingForYou = false;
+        StealthManager.globaLookingForPlayer = false;
     }
 
     public Vector3 RandomNavmeshLocation(float radius)

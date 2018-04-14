@@ -15,177 +15,211 @@ using UnityEditor.SceneManagement;
 [InitializeOnLoad]
 public class AutoSave : EditorWindow
 {
-	public static AutoSave instance = null;
-	public static Texture2D logo = null;
-	protected static System.Timers.Timer timer = null;
-	protected static int hierarchyChangeCount = 0;
-	protected static string logoPath = "Assets/Sixpolys/SIXP Autosaver/Editor/SixpolysLogo.png";
-	protected static bool _saveNow = false;
-	protected static bool savedBeforePlay = false;
-	protected static bool saveAfterPlay = false;
-	protected static Stopwatch stw1 = null;
+    public static AutoSave instance = null;
+    public static Texture2D logo = null;
+    protected static System.Timers.Timer timer = null;
+    protected static int hierarchyChangeCount = 0;
+    protected static string logoPath = "Assets/Sixpolys/SIXP Autosaver/Editor/SixpolysLogo.png";
+    protected static bool _saveNow = false;
+    protected static bool savedBeforePlay = false;
+    protected static bool saveAfterPlay = false;
+    protected static Stopwatch stw1 = null;
 
-	[MenuItem("Window/Autosave Settings")]
-	public static void ShowWindow ()
-	{
-		var window = EditorWindow.GetWindow<AutoSave> ();
-		window.maxSize = new Vector2 (window.maxSize.x, 50);
-		window.minSize = new Vector2 (0, 50);
-	}
+    [MenuItem("Window/Autosave Settings")]
+    public static void ShowWindow()
+    {
+        var window = EditorWindow.GetWindow<AutoSave>();
+        window.maxSize = new Vector2(window.maxSize.x, 50);
+        window.minSize = new Vector2(0, 50);
+    }
 
-	public static void LoadPreferences ()
-	{
-		if (AutoSavePreferences.autosaveEnabled) {
-			if (timer == null) {
-				timer = new System.Timers.Timer ();
-				timer.Interval = AutoSavePreferences.saveInterval;
-				timer.Elapsed += new  ElapsedEventHandler (timerFired);
-				timer.Start ();
-			} else {
-				if (timer.Interval != AutoSavePreferences.saveInterval) {
-					timer.Interval = AutoSavePreferences.saveInterval;
-				}
-			}
-		} else {
-			if (timer != null) {
-				timer.Stop ();
-				timer.Dispose ();
-				timer = null;
-			}
-		}
-		EditorApplication.hierarchyWindowChanged -= HierarchyChanged;
-		EditorApplication.playmodeStateChanged -= playModeChanged;
-		EditorApplication.hierarchyWindowChanged += HierarchyChanged;
-		EditorApplication.playmodeStateChanged += playModeChanged;
+    public static void LoadPreferences()
+    {
+        if (AutoSavePreferences.autosaveEnabled)
+        {
+            if (timer == null)
+            {
+                timer = new System.Timers.Timer();
+                timer.Interval = AutoSavePreferences.saveInterval;
+                timer.Elapsed += new ElapsedEventHandler(timerFired);
+                timer.Start();
+            }
+            else
+            {
+                if (timer.Interval != AutoSavePreferences.saveInterval)
+                {
+                    timer.Interval = AutoSavePreferences.saveInterval;
+                }
+            }
+        }
+        else
+        {
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+                timer = null;
+            }
+        }
+        EditorApplication.hierarchyWindowChanged -= HierarchyChanged;
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.playmodeStateChanged -= playModeChanged;
+#pragma warning restore CS0618 // Type or member is obsolete
+        EditorApplication.hierarchyWindowChanged += HierarchyChanged;
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.playmodeStateChanged += playModeChanged;
+#pragma warning restore CS0618 // Type or member is obsolete
 
-		if (instance != null) {
-			instance.Repaint ();
-		}
+        if (instance != null)
+        {
+            instance.Repaint();
+        }
 
-	}
+    }
 
 
-	public static void playModeChanged ()
-	{
-		if (AutoSavePreferences.saveBeforeRun && EditorApplication.isPlayingOrWillChangePlaymode && !savedBeforePlay) {
-			savedBeforePlay = true;
-			executeSave ();
-		} else if (!EditorApplication.isPaused && !EditorApplication.isPlaying) {
-			if (saveAfterPlay) {
-				executeSave ();
-			}
-		}
-	}
+    public static void playModeChanged()
+    {
+        if (AutoSavePreferences.saveBeforeRun && EditorApplication.isPlayingOrWillChangePlaymode && !savedBeforePlay)
+        {
+            savedBeforePlay = true;
+            executeSave();
+        }
+        else if (!EditorApplication.isPaused && !EditorApplication.isPlaying)
+        {
+            if (saveAfterPlay)
+            {
+                executeSave();
+            }
+        }
+    }
 
-	public static void HierarchyChanged ()
-	{
-		if (AutoSavePreferences.saveOnHierarchyChanges && !EditorApplication.isPlaying) {
-			hierarchyChangeCount++;
-			if (hierarchyChangeCount >= AutoSavePreferences.hierarchyChangeCountTrigger) {
-				hierarchyChangeCount = 0;
-				executeSave ();
-			}
-		}
-	}
+    public static void HierarchyChanged()
+    {
+        if (AutoSavePreferences.saveOnHierarchyChanges && !EditorApplication.isPlaying)
+        {
+            hierarchyChangeCount++;
+            if (hierarchyChangeCount >= AutoSavePreferences.hierarchyChangeCountTrigger)
+            {
+                hierarchyChangeCount = 0;
+                executeSave();
+            }
+        }
+    }
 
-	public static void timerFired (object sender, ElapsedEventArgs args)
-	{
-		if (!_saveNow) {
-			_saveNow = true;
-		}
-	}
-	
-	public static void executeSave ()
-	{
-		stw1.Stop ();
-		stw1.Reset ();
+    public static void timerFired(object sender, ElapsedEventArgs args)
+    {
+        if (!_saveNow)
+        {
+            _saveNow = true;
+        }
+    }
 
-		if (EditorApplication.isCompiling || BuildPipeline.isBuildingPlayer) {
-			return;
-		}
+    public static void executeSave()
+    {
+        stw1.Stop();
+        stw1.Reset();
 
-		// don't save during running game
-		if (EditorApplication.isPlaying || EditorApplication.isPaused) {
-			saveAfterPlay = true;
-			stw1.Start ();
-			return;
-		}
-		saveAfterPlay = false;
+        if (EditorApplication.isCompiling || BuildPipeline.isBuildingPlayer)
+        {
+            return;
+        }
 
-		// save untitled scene?
+        // don't save during running game
+        if (EditorApplication.isPlaying || EditorApplication.isPaused)
+        {
+            saveAfterPlay = true;
+            stw1.Start();
+            return;
+        }
+        saveAfterPlay = false;
+
+        // save untitled scene?
 #if UNITY_5_3
 		string sceneName = SceneManager.GetActiveScene ().name;
 #else
-			string sceneName = EditorApplication.currentScene;
+#pragma warning disable CS0618 // Type or member is obsolete
+        string sceneName = EditorApplication.currentScene;
+#pragma warning restore CS0618 // Type or member is obsolete
 #endif
-		if ((sceneName == "" || sceneName.StartsWith ("Untitled")) && !AutoSavePreferences.saveUnnamedNewScene) {
-			stw1.Start ();
-			return;
-		}
+        if ((sceneName == "" || sceneName.StartsWith("Untitled")) && !AutoSavePreferences.saveUnnamedNewScene)
+        {
+            stw1.Start();
+            return;
+        }
 
 
-		if (AutoSavePreferences.logSaveEvent) {
-			LOG.Log ("Autosave");
-		}
+        if (AutoSavePreferences.logSaveEvent)
+        {
+            LOG.Log("Autosave");
+        }
 #if UNITY_5_3
 		EditorSceneManager.SaveOpenScenes ();
 #else
-		EditorApplication.SaveScene ();
+#pragma warning disable CS0618 // Type or member is obsolete
+        EditorApplication.SaveScene();
+#pragma warning restore CS0618 // Type or member is obsolete
 #endif
-		if (AutoSavePreferences.saveAssets) {
-			AssetDatabase.SaveAssets ();
-			AssetDatabase.SaveAssets ();
-		}
-		if (instance != null) {
-			instance.Repaint ();
-		}
-		stw1.Start ();
-	}
+        if (AutoSavePreferences.saveAssets)
+        {
+            AssetDatabase.SaveAssets();
+            AssetDatabase.SaveAssets();
+        }
+        if (instance != null)
+        {
+            instance.Repaint();
+        }
+        stw1.Start();
+    }
 
-	[InitializeOnLoadMethod]
-	public static void InitAutosave ()
-	{
-		stw1 = new Stopwatch ();
-		stw1.Start ();
-		logo = (Texture2D)AssetDatabase.LoadAssetAtPath (logoPath, typeof(Texture2D));
-		EditorApplication.update += EditorUpdate;
-		AutoSavePreferences.LoadPreferences ();
-		LoadPreferences ();
-	}
+    [InitializeOnLoadMethod]
+    public static void InitAutosave()
+    {
+        stw1 = new Stopwatch();
+        stw1.Start();
+        logo = (Texture2D)AssetDatabase.LoadAssetAtPath(logoPath, typeof(Texture2D));
+        EditorApplication.update += EditorUpdate;
+        AutoSavePreferences.LoadPreferences();
+        LoadPreferences();
+    }
 
-	public static void EditorUpdate ()
-	{
-		if (_saveNow) {
-			_saveNow = false;
-			executeSave ();
-		}
-		if (instance != null) {
-			instance.Repaint ();
-		}
-	}
+    public static void EditorUpdate()
+    {
+        if (_saveNow)
+        {
+            _saveNow = false;
+            executeSave();
+        }
+        if (instance != null)
+        {
+            instance.Repaint();
+        }
+    }
 
-	public void OnEnable ()
-	{
-		instance = this;
-	}
+    public void OnEnable()
+    {
+        instance = this;
+    }
 
-	void OnGUI ()
-	{
-		EditorGUILayout.BeginHorizontal ();
-		if (logo != null) {
-			GUILayout.Label (logo, GUILayout.Width (50));
-		}
-		EditorGUILayout.BeginVertical ();
-		bool autosaveEnabled = GUILayout.Toggle (AutoSavePreferences.autosaveEnabled, "Autosave", GUILayout.ExpandWidth (true));
+    void OnGUI()
+    {
+        EditorGUILayout.BeginHorizontal();
+        if (logo != null)
+        {
+            GUILayout.Label(logo, GUILayout.Width(50));
+        }
+        EditorGUILayout.BeginVertical();
+        bool autosaveEnabled = GUILayout.Toggle(AutoSavePreferences.autosaveEnabled, "Autosave", GUILayout.ExpandWidth(true));
 
-		EditorGUILayout.LabelField ("Last saved: " + Math.Floor (stw1.Elapsed.TotalMinutes) + " minutes ago");
-		EditorGUILayout.EndVertical ();
-		EditorGUILayout.EndHorizontal ();
+        EditorGUILayout.LabelField("Last saved: " + Math.Floor(stw1.Elapsed.TotalMinutes) + " minutes ago");
+        EditorGUILayout.EndVertical();
+        EditorGUILayout.EndHorizontal();
 
-		if (GUI.changed) {
-			AutoSavePreferences.autosaveEnabled = autosaveEnabled;
-			AutoSavePreferences.SavePreferences ();
+        if (GUI.changed)
+        {
+            AutoSavePreferences.autosaveEnabled = autosaveEnabled;
+            AutoSavePreferences.SavePreferences();
 
-		}
-	}	
+        }
+    }
 }
