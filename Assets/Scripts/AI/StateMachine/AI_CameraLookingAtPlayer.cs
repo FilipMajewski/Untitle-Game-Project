@@ -22,7 +22,7 @@ public class AI_CameraLookingAtPlayer : AI_Base_NoNavMeshAgent
         npc.transform.GetChild(0).rotation = Quaternion.Slerp(npc.transform.GetChild(0).rotation,
             targetRotation, Time.deltaTime * 2.0f);
 
-        if (StealthManager.globaLookingForPlayer)
+        if (StealthManager.GlobaLookingForPlayer)
         {
             animator.SetBool("SeeLawBreaking", true);
         }

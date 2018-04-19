@@ -1,45 +1,224 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-
+using NodeCanvas.Framework;
 public class AI_Setup : MonoBehaviour
 {
     public SO_AI_Parameters parameters;
 
-    Animator anim;
     DrawFOV_CheckForPlayer fov;
-    NavMeshAgent agent;
-    [HideInInspector]
-    public Vector3 sawPlayerAtThisPosition;
-    [HideInInspector]
-    public float lookingRadius;
-    [HideInInspector]
-    public bool calledToSearchPlayer;
-    public GameObject[] waypoints;
+    List<GameObject> waypoints;
+    Vector3 sawPlayerAtThisPosition;
+    GlobalBlackboard stealthBlackboard;
 
-    // Use this for initialization
-    void Start()
+    private bool isPlayerCrouching, calledToSearchPlayer, isBreakingTheLaw, globalLookingForPlayer;
+    private float visionAngle, normalSpeed, chaseSpeed, visionRange, crouchedVisionRange;
+
+    #region Encapsulation
+
+    public float NormalSpeed
     {
-        agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        get
+        {
+            return normalSpeed;
+        }
+
+        set
+        {
+            normalSpeed = value;
+        }
+    }
+
+    public float ChaseSpeed
+    {
+        get
+        {
+            return chaseSpeed;
+        }
+
+        set
+        {
+            chaseSpeed = value;
+        }
+    }
+
+    public float VisionRange
+    {
+        get
+        {
+            return visionRange;
+        }
+
+        set
+        {
+            visionRange = value;
+        }
+    }
+
+    public float VisionAngle
+    {
+        get
+        {
+            return visionAngle;
+        }
+
+        set
+        {
+            visionAngle = value;
+        }
+    }
+
+    public List<GameObject> Waypoints
+    {
+        get
+        {
+            return Waypoints1;
+        }
+
+        set
+        {
+            Waypoints1 = value;
+        }
+    }
+
+    public float CrouchedVisionRange
+    {
+        get
+        {
+            return crouchedVisionRange;
+        }
+
+        set
+        {
+            crouchedVisionRange = value;
+        }
+    }
+
+    public bool CalledToSearchPlayer
+    {
+        get
+        {
+            return calledToSearchPlayer;
+        }
+
+        set
+        {
+            calledToSearchPlayer = value;
+        }
+    }
+
+    public bool IsPlayerCrouching
+    {
+        get
+        {
+            return isPlayerCrouching;
+        }
+
+        set
+        {
+            isPlayerCrouching = value;
+        }
+    }
+
+    public bool IsBreakingTheLaw
+    {
+        get
+        {
+            return isBreakingTheLaw;
+        }
+
+        set
+        {
+            isBreakingTheLaw = value;
+        }
+    }
+
+    public bool GlobalLookingForPlayer
+    {
+        get
+        {
+            return globalLookingForPlayer;
+        }
+
+        set
+        {
+            globalLookingForPlayer = value;
+        }
+    }
+
+    public Vector3 SawPlayerAtThisPosition
+    {
+        get
+        {
+            return sawPlayerAtThisPosition;
+        }
+
+        set
+        {
+            sawPlayerAtThisPosition = value;
+        }
+    }
+
+    public List<GameObject> Waypoints1
+    {
+        get
+        {
+            return waypoints;
+        }
+
+        set
+        {
+            waypoints = value;
+        }
+    }
+    #endregion
+
+    void Awake()
+    {
+        FeedAIParameters();
+
+    }
+
+    private void Start()
+    {
         fov = GetComponent<DrawFOV_CheckForPlayer>();
-        lookingRadius = parameters.lookingRadius;
-        calledToSearchPlayer = false;
+        stealthBlackboard = GameObject.FindGameObjectWithTag("Manager").GetComponent<GlobalBlackboard>();
+        CalledToSearchPlayer = false;
+
+        GameObject[] waypointsArray = GameObject.FindGameObjectsWithTag("Waypoint");
+
+        for (int i = 0; i < waypointsArray.Length; i++)
+        {
+            Waypoints.Add(waypointsArray[i]);
+        }
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        anim.SetBool("SeePlayer", fov.seeYou);
-        anim.SetBool("SeeLawBreaking", fov.seeThatYouBreakinLaw);
+        IsPlayerCrouching = stealthBlackboard.GetValue<bool>("isCrouching");
+        IsBreakingTheLaw = stealthBlackboard.GetValue<bool>("isBreakingTheLaw");
+        GlobalLookingForPlayer = stealthBlackboard.GetValue<bool>("globalLookingForPlayer");
 
-        Debug.Log("Called to search player " + calledToSearchPlayer);
+        if (isPlayerCrouching)
+        {
+            VisionRange = CrouchedVisionRange;
+        }
+        else
+        {
+            VisionRange = parameters.visionRange;
+        }
+
     }
 
-    void FeedNavAgent()
+    void FeedAIParameters()
     {
-        agent.speed = parameters.maxSpeed;
-        agent.angularSpeed = parameters.turnSpeed;
+        NormalSpeed = parameters.normalSpeed;
+        ChaseSpeed = parameters.chaseSpeed;
+        VisionRange = parameters.visionRange;
+        VisionAngle = parameters.visionAngle;
+        CrouchedVisionRange = parameters.crouchedVisionRange;
     }
+
 }

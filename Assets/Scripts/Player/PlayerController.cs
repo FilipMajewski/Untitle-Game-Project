@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Crouched");
             crouched = !crouched;
-            StealthManager.isBreakingLaw = !StealthManager.isBreakingLaw;
+            StealthManager.IsBreakingLaw = !StealthManager.IsBreakingLaw;
         }
 
         if (!inter.Hiden)
@@ -157,6 +157,16 @@ public class PlayerController : MonoBehaviour
         {
             cc.SimpleMove(move * currentSpeed);
         }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
 
     }
 

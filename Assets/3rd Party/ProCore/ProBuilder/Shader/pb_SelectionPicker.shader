@@ -1,4 +1,4 @@
-﻿Shader "Hidden/ProBuilder/SelectionPicker"
+Shader "Hidden/ProBuilder/SelectionPicker"
 {
 	Properties {}
 

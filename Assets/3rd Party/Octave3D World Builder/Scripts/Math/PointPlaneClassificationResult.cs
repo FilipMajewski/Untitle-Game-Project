@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
 public enum PointPlaneClassificationResult 
 {
     InFront = 0,

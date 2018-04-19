@@ -1,4 +1,4 @@
-﻿Shader "Hidden/ProBuilder/VertexPicker"
+Shader "Hidden/ProBuilder/VertexPicker"
 {
 	Properties {}
 

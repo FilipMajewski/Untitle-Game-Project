@@ -1,4 +1,4 @@
-﻿#if !PROTOTYPE
+#if !PROTOTYPE
 
 using UnityEngine;
 using UnityEditor;

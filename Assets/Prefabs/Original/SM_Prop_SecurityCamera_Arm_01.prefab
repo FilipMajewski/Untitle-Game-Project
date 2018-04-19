@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33809422568411360}
   - component: {fileID: 23998110697019794}
   - component: {fileID: 114439865676731776}
-  - component: {fileID: 95930117803795172}
   - component: {fileID: 114531383595227122}
+  - component: {fileID: 114901352651408856}
+  - component: {fileID: 114446909720758572}
   m_Layer: 10
   m_Name: SM_Prop_SecurityCamera_Arm_01
   m_TagString: AI_Camera
@@ -230,23 +231,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1962465662756912}
   m_Mesh: {fileID: 4300002, guid: cf90d4a549b39c943ba41e1e129f7de6, type: 3}
---- !u!95 &95930117803795172
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618003539018564}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9175afe5aa3051b4aa2fc89c4bf9c70c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114439865676731776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,6 +243,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters: {fileID: 11400000, guid: 84a994e0bfdf0844a9b2f74148800b42, type: 2}
+--- !u!114 &114446909720758572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618003539018564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{"VisionRange":{"_propertyPath":"AI_Setup.VisionRange","_name":"VisionRange","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"VisionAngle":{"_propertyPath":"AI_Setup.VisionAngle","_name":"VisionAngle","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
 --- !u!114 &114531383595227122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,9 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1496d264e1d6e41a2a3d6cf6279359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeYou: 0
-  seeThatYouBreakinLaw: 0
-  lookingForYou: 0
 --- !u!114 &114828048367975904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,14 +280,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b6edd1c7e2ea4c82da4beebd62d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visionRange: 0
+  currentVisionRange: 0
+  viewAngle: 0
   targetMask:
     serializedVersion: 2
     m_Bits: 256
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1
-  visibleTargets: []
   meshResolution: 0.5
   edgeResolveIterations: 2
   edgeDstThreshold: 0.2
   viewMeshFilter: {fileID: 33083338666139630}
+--- !u!114 &114901352651408856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618003539018564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7dbb6bbdf4ffb46ab7dd87ba8191e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.8,"type":"NodeCanvas.StateMachines.FSM","nodes":[],"connections":[],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  boundGraphObjectReferences: []
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 114446909720758572}

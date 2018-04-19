@@ -1,4 +1,4 @@
-﻿/**
+/**
  *	This script demonstrates one use case for the pb_EditorUtility.onMeshCompiled delegate.
  *
  *	Whenever ProBuilder compiles a mesh it removes the colors, tangents, and uv attributes.

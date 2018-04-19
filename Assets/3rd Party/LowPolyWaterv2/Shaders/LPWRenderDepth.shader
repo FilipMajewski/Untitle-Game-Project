@@ -1,4 +1,4 @@
-﻿Shader "Hidden/LPWRenderDepth" {
+Shader "Hidden/LPWRenderDepth" {
 
     SubShader {
         Tags { "RenderType"="Opaque" }

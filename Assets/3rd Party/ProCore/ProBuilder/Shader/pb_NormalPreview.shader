@@ -1,4 +1,4 @@
-﻿Shader "Hidden/ProBuilder/NormalPreview"
+Shader "Hidden/ProBuilder/NormalPreview"
 {
 	SubShader
 	{

@@ -4,21 +4,62 @@ using UnityEngine;
 
 public class StealthManager : MonoBehaviour
 {
+    [SerializeField]
+    private static bool isBreakingLaw, globaLookingForPlayer, isCrouching;
 
-    public static bool isBreakingLaw;
-    public static bool globaLookingForPlayer;
+
+    #region Encapsulation
+    public static bool IsCrouching
+    {
+        get
+        {
+            return isCrouching;
+        }
+
+        set
+        {
+            isCrouching = value;
+        }
+    }
+
+    public static bool GlobaLookingForPlayer
+    {
+        get
+        {
+            return globaLookingForPlayer;
+        }
+
+        set
+        {
+            globaLookingForPlayer = value;
+        }
+    }
+
+    public static bool IsBreakingLaw
+    {
+        get
+        {
+            return isBreakingLaw;
+        }
+
+        set
+        {
+            isBreakingLaw = value;
+        }
+    }
+    #endregion
 
     // Use this for initialization
     void Start()
     {
-        isBreakingLaw = false;
-        globaLookingForPlayer = false;
+        IsBreakingLaw = false;
+        GlobaLookingForPlayer = false;
+        IsCrouching = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Breaking Law " + isBreakingLaw);
-        Debug.Log("Global looking for player " + globaLookingForPlayer);
+
     }
 }

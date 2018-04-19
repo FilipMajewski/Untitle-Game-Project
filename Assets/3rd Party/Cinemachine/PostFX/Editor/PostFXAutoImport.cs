@@ -1,4 +1,4 @@
-﻿
+
 namespace Cinemachine.PostFX
 {
     /// <summary>Integrates Cinemachine with PostProcessing V1 stack.</summary>

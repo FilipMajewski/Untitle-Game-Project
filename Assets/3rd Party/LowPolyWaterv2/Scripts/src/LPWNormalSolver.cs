@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The following code is loosely inspired by: http://schemingdeveloper.com
  *
  * Visit their game studio website: http://stopthegnomes.com

@@ -1,4 +1,4 @@
-﻿/**
+/**
  *	This script demonstrates how one might use the OnproBuilderObjectCreated delegate.
  */
 

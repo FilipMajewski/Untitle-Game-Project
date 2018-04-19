@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace LowPolyWaterv2Demo {
     public class DemoFreeFlyCamera : MonoBehaviour {

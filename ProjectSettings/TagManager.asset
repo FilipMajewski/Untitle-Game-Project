@@ -4,13 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Element
   - FPS Counter
   - AI
   - Waypoint
   - AI_Guard
   - AI_Camera
   - AI_Pedestrian
+  - Manager
   layers:
   - Default
   - TransparentFX
@@ -27,7 +27,7 @@ TagManager:
   - Always Visible Parts Building
   - Triggers
   - Player Blockers
-  - 
+  - Enviroment
   - 
   - 
   - 

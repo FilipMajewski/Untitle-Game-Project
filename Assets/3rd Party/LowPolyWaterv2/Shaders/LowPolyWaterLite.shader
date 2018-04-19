@@ -1,4 +1,4 @@
-﻿Shader "LowPolyWater/Lite" {
+Shader "LowPolyWater/Lite" {
 	Properties {
 		// Lighting
 		_Color ("Color", Color) = (0,0.5,0.7)

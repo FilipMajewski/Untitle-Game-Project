@@ -1,4 +1,4 @@
-﻿#define PRO
+#define PRO
 
 using UnityEngine;
 using System.Collections;
