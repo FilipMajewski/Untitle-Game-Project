@@ -18,6 +18,7 @@ namespace NodeCanvas.Tasks.Conditions
         [SliderField(1, 180)]
         public BBParameter<float> viewAngle = 70f;
         public Vector3 offset;
+        public BBParameter<LayerMask> layerMask = (LayerMask)(-1);
 
         private RaycastHit hit;
 
@@ -35,7 +36,7 @@ namespace NodeCanvas.Tasks.Conditions
                 return false;
             }
 
-            if (Physics.Linecast(agent.position + offset, t.position + offset, out hit))
+            if (Physics.Linecast(agent.position + offset, t.position + offset, out hit, layerMask.value))
             {
                 if (hit.collider != t.GetComponent<Collider>())
                 {

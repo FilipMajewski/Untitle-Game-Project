@@ -7,12 +7,17 @@ public class AI_Setup : MonoBehaviour
     public SO_AI_Parameters parameters;
 
     DrawFOV_CheckForPlayer fov;
-    List<GameObject> waypoints;
-    Vector3 sawPlayerAtThisPosition;
     GlobalBlackboard stealthBlackboard;
+    Blackboard blackboard;
+
+    public List<GameObject> waypoints;
+    GameObject player;
+    Vector3 sawPlayerAtThisPosition;
+    Transform cameraHead, lookingPoint;
 
     private bool isPlayerCrouching, calledToSearchPlayer, isBreakingTheLaw, globalLookingForPlayer;
-    private float visionAngle, normalSpeed, chaseSpeed, visionRange, crouchedVisionRange;
+    private float visionAngle, normalSpeed, chaseSpeed, visionRange, crouchedVisionRange, checkCameraRotation;
+
 
     #region Encapsulation
 
@@ -65,19 +70,6 @@ public class AI_Setup : MonoBehaviour
         set
         {
             visionAngle = value;
-        }
-    }
-
-    public List<GameObject> Waypoints
-    {
-        get
-        {
-            return Waypoints1;
-        }
-
-        set
-        {
-            Waypoints1 = value;
         }
     }
 
@@ -159,7 +151,7 @@ public class AI_Setup : MonoBehaviour
         }
     }
 
-    public List<GameObject> Waypoints1
+    public List<GameObject> Waypoints
     {
         get
         {
@@ -171,25 +163,77 @@ public class AI_Setup : MonoBehaviour
             waypoints = value;
         }
     }
+
+    public Transform CameraHead
+    {
+        get
+        {
+            return cameraHead;
+        }
+
+        set
+        {
+            cameraHead = value;
+        }
+    }
+
+    public Transform LookingPoint
+    {
+        get
+        {
+            return lookingPoint;
+        }
+
+        set
+        {
+            lookingPoint = value;
+        }
+    }
+
+    public float CheckCameraRotation
+    {
+        get
+        {
+            return checkCameraRotation;
+        }
+
+        set
+        {
+            checkCameraRotation = value;
+        }
+    }
+
     #endregion
 
     void Awake()
     {
         FeedAIParameters();
-
     }
 
     private void Start()
     {
         fov = GetComponent<DrawFOV_CheckForPlayer>();
         stealthBlackboard = GameObject.FindGameObjectWithTag("Manager").GetComponent<GlobalBlackboard>();
+        blackboard = GetComponent<Blackboard>();
         CalledToSearchPlayer = false;
+        player = GameObject.FindGameObjectWithTag("Player");
 
-        GameObject[] waypointsArray = GameObject.FindGameObjectsWithTag("Waypoint");
-
-        for (int i = 0; i < waypointsArray.Length; i++)
+        if (parameters.isGuard)
         {
-            Waypoints.Add(waypointsArray[i]);
+            GameObject[] waypointsArray = GameObject.FindGameObjectsWithTag("Waypoint");
+
+            for (int i = 0; i < waypointsArray.Length; i++)
+            {
+                Waypoints.Add(waypointsArray[i]);
+            }
+
+            CameraHead = null;
+        }
+
+        if (parameters.isCamera)
+        {
+            CameraHead = transform.GetChild(0);
+            LookingPoint = CameraHead.GetChild(0);
         }
 
 
@@ -201,13 +245,18 @@ public class AI_Setup : MonoBehaviour
         IsBreakingTheLaw = stealthBlackboard.GetValue<bool>("isBreakingTheLaw");
         GlobalLookingForPlayer = stealthBlackboard.GetValue<bool>("globalLookingForPlayer");
 
-        if (isPlayerCrouching)
+        if (IsPlayerCrouching)
         {
             VisionRange = CrouchedVisionRange;
         }
         else
         {
             VisionRange = parameters.visionRange;
+        }
+
+        if (parameters.isGuard && blackboard.GetValue<bool>("CalledToSearchPlayer"))
+        {
+            SawPlayerAtThisPosition = blackboard.GetValue<Vector3>("SawPlayerAtThisPosition");
         }
 
     }

@@ -76,8 +76,6 @@ public class DrawFOV_CheckForPlayer : MonoBehaviour
         view.VisionRange = _AI_Setup.parameters.visionRange;
         view.ViewAngle = _AI_Setup.parameters.visionAngle * 2;
 
-        Debug.Log(view.ViewAngle);
-
         fovMeshMaterial = new Material(shader)
         {
             enableInstancing = true

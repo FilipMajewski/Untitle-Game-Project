@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114439865676731776}
   - component: {fileID: 114531383595227122}
   - component: {fileID: 114901352651408856}
+  - component: {fileID: 114001649787345830}
   - component: {fileID: 114446909720758572}
   m_Layer: 10
   m_Name: SM_Prop_SecurityCamera_Arm_01
@@ -231,6 +232,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1962465662756912}
   m_Mesh: {fileID: 4300002, guid: cf90d4a549b39c943ba41e1e129f7de6, type: 3}
+--- !u!114 &114001649787345830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618003539018564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad115aca74ce3c4891b3f6de0b4aae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.8,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-4910.0,"y":-5057.0},"nodes":[{"repeaterMode":"RepeatForever","repeatTimes":{"_value":1},"_position":{"x":5301.0,"y":5327.0},"$type":"NodeCanvas.BehaviourTrees.Repeater","$id":"2"},{"dynamic":true,"_condition":{"target":{"_name":"GlobalStealthBB/Player","_targetVariableID":"43633b73-1eae-45d1-ac34-d3097abc5ec8"},"maxDistance":{"_value":50.0,"_name":"VisionRange","_targetVariableID":"10f70456-ba60-44bd-b42c-bf8f32219ad4"},"awarnessDistance":{},"viewAngle":{"_value":70.0,"_name":"VisionAngle","_targetVariableID":"49c986de-e746-4726-8753-871def2238ad"},"layerMask":{"_value":{"value":33024}},"overrideAgent":{"_value":1},"$type":"NodeCanvas.Tasks.Conditions.CanSeeTarget"},"_position":{"x":5225.0,"y":5451.0},"$type":"NodeCanvas.BehaviourTrees.BinarySelector","$id":"4"},{"_action":{"boolVariable":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"$type":"NodeCanvas.Tasks.Actions.SetBoolean"},"_position":{"x":5159.0,"y":5637.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"12"},{"_action":{"boolVariable":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"setTo":"False","$type":"NodeCanvas.Tasks.Actions.SetBoolean"},"_position":{"x":5399.0,"y":5637.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"15"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"15"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"primeNode":{"$ref":"2"},"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 4181132998477844}
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 114446909720758572}
 --- !u!114 &114439865676731776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters: {fileID: 11400000, guid: 84a994e0bfdf0844a9b2f74148800b42, type: 2}
+  waypoints: []
 --- !u!114 &114446909720758572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,9 +276,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _serializedBlackboard: '{"_variables":{"VisionRange":{"_propertyPath":"AI_Setup.VisionRange","_name":"VisionRange","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"VisionAngle":{"_propertyPath":"AI_Setup.VisionAngle","_name":"VisionAngle","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _serializedBlackboard: '{"_variables":{"VisionRange":{"_propertyPath":"AI_Setup.VisionRange","_name":"VisionRange","_id":"10f70456-ba60-44bd-b42c-bf8f32219ad4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"VisionAngle":{"_propertyPath":"AI_Setup.VisionAngle","_name":"VisionAngle","_id":"49c986de-e746-4726-8753-871def2238ad","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SawPlayerAtThisPosition":{"_propertyPath":"AI_Setup.SawPlayerAtThisPosition","_name":"SawPlayerAtThisPosition","_id":"1da5371d-a6b9-4b4d-b77f-19af498d0e89","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SeeYou":{"_propertyPath":"DrawFOV_CheckForPlayer.SeeYou","_name":"SeeYou","_id":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CameraHead":{"_propertyPath":"AI_Setup.CameraHead","_name":"CameraHead","_id":"49106323-14fe-4b28-b1b1-e7c102e86afb","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"LookingPoint":{"_propertyPath":"AI_Setup.LookingPoint","_name":"LookingPoint","_id":"e3ecd15f-0fb2-474e-aee5-c11c442af5b0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
 --- !u!114 &114531383595227122
 MonoBehaviour:
@@ -288,7 +314,7 @@ MonoBehaviour:
     m_Bits: 256
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32768
   meshResolution: 0.5
   edgeResolveIterations: 2
   edgeDstThreshold: 0.2
@@ -304,9 +330,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7dbb6bbdf4ffb46ab7dd87ba8191e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundGraphSerialization: '{"version":2.8,"type":"NodeCanvas.StateMachines.FSM","nodes":[],"connections":[],"localBlackboard":{"_name":"Local
+  boundGraphSerialization: '{"version":2.8,"type":"NodeCanvas.StateMachines.FSM","translation":{"x":-5163.0,"y":-4938.0},"nodes":[{"_nestedBT":{"_value":1},"_position":{"x":5425.0,"y":5239.0},"_name":"Camera
+    Sweep","$type":"NodeCanvas.StateMachines.NestedBTState","$id":"2"},{"_nestedBT":{"_value":2},"_position":{"x":5667.0,"y":5460.0},"_name":"Look
+    at Player","$type":"NodeCanvas.StateMachines.NestedBTState","$id":"4"}],"connections":[{"_condition":{"valueA":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"valueB":{"_value":true},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"valueB":{},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolean"},"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"primeNode":{"$ref":"2"},"localBlackboard":{"_name":"Local
     Blackboard","_variables":{}}}'
-  boundGraphObjectReferences: []
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: d44c2be63579d704a97f2472e2e3a542, type: 2}
+  - {fileID: 11400000, guid: 0f8f5e609e9f010479fb02e1c94bd821, type: 2}
   enableAction: 0
   disableAction: 0
   _graph: {fileID: 0}

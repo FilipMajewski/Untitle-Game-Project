@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
+  m_Name: BT_CameraVision
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.8,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-5096.0,"y":-4969.0},"nodes":[{"repeaterMode":"RepeatForever","repeatTimes":{"_value":1},"_position":{"x":5439.0,"y":5139.0},"$type":"NodeCanvas.BehaviourTrees.Repeater","$id":"2"},{"policy":"FirstSuccess","dynamic":true,"_position":{"x":5443.0,"y":5257.0},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"4"},{"_condition":{"target":{"_name":"GlobalStealthBB/Player","_targetVariableID":"43633b73-1eae-45d1-ac34-d3097abc5ec8"},"maxDistance":{"_name":"VisionRange","_targetVariableID":"10f70456-ba60-44bd-b42c-bf8f32219ad4"},"awarnessDistance":{},"viewAngle":{"_name":"VisionAngle","_targetVariableID":"49c986de-e746-4726-8753-871def2238ad"},"offset":{"y":-3.0},"overrideAgent":{"_name":"LookingPoint","_targetVariableID":"e3ecd15f-0fb2-474e-aee5-c11c442af5b0"},"$type":"NodeCanvas.Tasks.Conditions.CanSeeTarget"},"_position":{"x":5217.0,"y":5427.0},"$type":"NodeCanvas.BehaviourTrees.ConditionalEvaluator","$id":"5"},{"_action":{"boolVariable":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"$type":"NodeCanvas.Tasks.Actions.SetBoolean"},"_position":{"x":5271.0,"y":5555.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"12"},{"_condition":{"target":{"_name":"GlobalStealthBB/Player","_targetVariableID":"43633b73-1eae-45d1-ac34-d3097abc5ec8"},"maxDistance":{"_name":"VisionRange","_targetVariableID":"10f70456-ba60-44bd-b42c-bf8f32219ad4"},"awarnessDistance":{},"viewAngle":{"_value":1.0,"_name":"VisionAngle","_targetVariableID":"49c986de-e746-4726-8753-871def2238ad"},"offset":{"y":-3.0},"_invert":true,"overrideAgent":{"_name":"LookingPoint","_targetVariableID":"e3ecd15f-0fb2-474e-aee5-c11c442af5b0"},"$type":"NodeCanvas.Tasks.Conditions.CanSeeTarget"},"_position":{"x":5499.0,"y":5429.0},"$type":"NodeCanvas.BehaviourTrees.ConditionalEvaluator","$id":"15"},{"_action":{"boolVariable":{"_name":"SeeYou","_targetVariableID":"ab2b41ff-3d8f-4aee-97a5-dfc6e5f73c8e"},"setTo":"False","$type":"NodeCanvas.Tasks.Actions.SetBoolean"},"_position":{"x":5555.0,"y":5551.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"22"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"15"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"15"},"_targetNode":{"$ref":"22"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"primeNode":{"$ref":"2"},"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+  repeat: 1
+  updateInterval: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 07f572ce8e5744542be4500b51512976, type: 3}
   fovMeshMaterial: {fileID: 0}
-  visionRange: 10
-  crouchedVisionRange: 7
+  visionRange: 15
+  crouchedVisionRange: 5
   visionAngle: 45
   normalColor: {r: 0, g: 0.5034485, b: 1, a: 0.15686275}
   investigateColor: {r: 1, g: 0.76551723, b: 0, a: 0.15686275}
