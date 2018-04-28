@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     CharacterController cc;
     Animator anim;
     Interaction inter;
-
+    ChangeCameraView cameraView;
     private Vector3 move;
 
     private bool falling, crouched;
@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         inter = GetComponent<Interaction>();
+        cameraView = GetComponent<ChangeCameraView>();
         currentSpeed = maxMoveSpeed;
         falling = false;
         crouched = false;
@@ -116,10 +117,13 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Crouched");
             crouched = !crouched;
-            StealthManager.IsBreakingLaw = !StealthManager.IsBreakingLaw;
         }
 
-        if (!inter.Hiden)
+        if (cameraView.IsTopdownCameraActive || inter.Hiden)
+        {
+            Movement(0, 0);
+        }
+        else
         {
             Movement(horizontal, vertical);
         }
@@ -159,17 +163,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-
-    }
-
 
 }
 

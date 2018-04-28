@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: Main Camera Blends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: Vcamera
-    m_To: Topup Camera
+  - m_From: Top down Camera
+    m_To: Default Follow Camera
     m_Blend:
-      m_Style: 1
+      m_Style: 0
       m_Time: 1
-  - m_From: Topup Camera
-    m_To: Vcamera
+  - m_From: Default Follow Camera
+    m_To: Top down Camera
     m_Blend:
-      m_Style: 1
+      m_Style: 0
       m_Time: 1

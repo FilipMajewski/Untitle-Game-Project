@@ -9,12 +9,16 @@ public class InteractableObject : MonoBehaviour
 
     SphereCollider interactionCollider;
     Interaction interaction;
+    Canvas itemCanvas;
 
     // Use this for initialization
     void Start()
     {
         interactionCollider = GetComponent<SphereCollider>();
         interactionCollider.radius = _Item.interactionArea;
+        itemCanvas = GetComponentInChildren<Canvas>();
+
+        itemCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -32,7 +36,11 @@ public class InteractableObject : MonoBehaviour
             interaction.CanInteract = true;
             interaction.CanPickup = _Item.canPickup;
             interaction.interactWith = gameObject;
+
+            ShowHideUI();
         }
+
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -44,19 +52,20 @@ public class InteractableObject : MonoBehaviour
             interaction.CanPickup = false;
             interaction.interactWith = null;
             interaction = null;
+
+            ShowHideUI();
         }
     }
 
     private void OnDestroy()
     {
         interaction = GameObject.FindGameObjectWithTag("Player").GetComponent<Interaction>();
+        GameManager.currentCash += _Item.value;
         interaction.CanInteract = false;
         interaction.interactWith = null;
         interaction.CanPickup = false;
         interaction = null;
     }
-
-    //#if UNITY_EDITOR
 
     private void OnDrawGizmos()
     {
@@ -64,5 +73,9 @@ public class InteractableObject : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _Item.interactionArea);
     }
 
-    //#endif
+    void ShowHideUI()
+    {
+        itemCanvas.enabled = !itemCanvas.enabled;
+    }
+
 }

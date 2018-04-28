@@ -8,5 +8,6 @@ public class SO_Item : SO_Interactable
     [Header("Items specific")]
     public string itemName;
     public int value;
+    public int outlineRadius;
 
 }

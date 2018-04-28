@@ -208,34 +208,11 @@ public class AI_Setup : MonoBehaviour
     void Awake()
     {
         FeedAIParameters();
+        CreateComponentConection();
     }
 
     private void Start()
     {
-        fov = GetComponent<DrawFOV_CheckForPlayer>();
-        stealthBlackboard = GameObject.FindGameObjectWithTag("Manager").GetComponent<GlobalBlackboard>();
-        blackboard = GetComponent<Blackboard>();
-        CalledToSearchPlayer = false;
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        if (parameters.isGuard)
-        {
-            GameObject[] waypointsArray = GameObject.FindGameObjectsWithTag("Waypoint");
-
-            for (int i = 0; i < waypointsArray.Length; i++)
-            {
-                Waypoints.Add(waypointsArray[i]);
-            }
-
-            CameraHead = null;
-        }
-
-        if (parameters.isCamera)
-        {
-            CameraHead = transform.GetChild(0);
-            LookingPoint = CameraHead.GetChild(0);
-        }
-
 
     }
 
@@ -268,6 +245,33 @@ public class AI_Setup : MonoBehaviour
         VisionRange = parameters.visionRange;
         VisionAngle = parameters.visionAngle;
         CrouchedVisionRange = parameters.crouchedVisionRange;
+    }
+
+    void CreateComponentConection()
+    {
+        fov = GetComponent<DrawFOV_CheckForPlayer>();
+        stealthBlackboard = GameObject.FindGameObjectWithTag("Manager").GetComponent<GlobalBlackboard>();
+        blackboard = GetComponent<Blackboard>();
+        CalledToSearchPlayer = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (parameters.isGuard)
+        {
+            GameObject[] waypointsArray = GameObject.FindGameObjectsWithTag("Waypoint");
+
+            for (int i = 0; i < waypointsArray.Length; i++)
+            {
+                Waypoints.Add(waypointsArray[i]);
+            }
+
+            CameraHead = null;
+        }
+
+        if (parameters.isCamera)
+        {
+            CameraHead = transform.GetChild(0);
+            LookingPoint = CameraHead.GetChild(0);
+        }
     }
 
 }

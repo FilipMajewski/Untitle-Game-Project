@@ -35,6 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4170048882768586}
   - component: {fileID: 114445896248476372}
+  - component: {fileID: 114063800333178070}
+  - component: {fileID: 114633136380561694}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -88,8 +90,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4757238883788708}
   - component: {fileID: 114384151810551060}
+  - component: {fileID: 114159624524505244}
   m_Layer: 0
-  m_Name: Topup Camera
+  m_Name: Top down Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +109,7 @@ GameObject:
   - component: {fileID: 114694258198488846}
   - component: {fileID: 114653258992961024}
   m_Layer: 0
-  m_Name: Vcamera
+  m_Name: Default Follow Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1541178404308360}
   m_LocalRotation: {x: 0.49673173, y: 0.40957606, z: -0.2867882, w: 0.70940655}
-  m_LocalPosition: {x: -55.423977, y: 18.793852, z: -134.42023}
+  m_LocalPosition: {x: -20.923971, y: 18.79385, z: -109.92023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4762062393469584}
@@ -158,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1601535359243144}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.5, y: 84, z: -108}
+  m_LocalPosition: {x: -21, y: 35, z: -107.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4170048882768586}
@@ -188,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1768582741901812}
   m_LocalRotation: {x: 0.49673173, y: 0.40957606, z: -0.2867882, w: 0.70940655}
-  m_LocalPosition: {x: -55.423977, y: 18.793852, z: -134.42023}
+  m_LocalPosition: {x: -20.923971, y: 18.79385, z: -109.92023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4501263021940426}
@@ -204,7 +207,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.058823526, g: 0.058823526, b: 0.058823526, a: 0}
+  m_BackGroundColor: {r: 0.08823532, g: 0.08823532, b: 0.08823532, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -219,7 +222,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -231,6 +234,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &114063800333178070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283392745343190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: a3dacaec0287d7444b4bd276816e1666, type: 2}
+  m_AmplitudeGain: 0.3
+  m_FrequencyGain: 0.3
 --- !u!114 &114089049249912114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,6 +259,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114159624524505244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601535359243144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 1
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 2
 --- !u!114 &114235885614635298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,7 +416,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 30
+    FieldOfView: 60
     OrthographicSize: 14
     NearClipPlane: 1
     FarClipPlane: 200
@@ -412,6 +445,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 51946f8591c6c7949aa230652c7e5300, type: 2}
+--- !u!114 &114633136380561694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283392745343190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 3
+  m_FollowOffset: {x: 0, y: 35, z: 0}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
 --- !u!114 &114653258992961024
 MonoBehaviour:
   m_ObjectHideFlags: 1

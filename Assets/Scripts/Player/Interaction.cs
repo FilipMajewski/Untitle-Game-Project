@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    AnimationController animationController;
+    Player_AnimationController animationController;
     CharacterController cc;
 
     bool canInteract;
@@ -62,7 +62,7 @@ public class Interaction : MonoBehaviour
     void Start()
     {
         valueToAdd = 0;
-        animationController = GetComponentInChildren<AnimationController>();
+        animationController = GetComponentInChildren<Player_AnimationController>();
         cc = GetComponent<CharacterController>();
 
         hiden = false;
