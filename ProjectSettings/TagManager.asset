@@ -12,6 +12,7 @@ TagManager:
   - AI_Pedestrian
   - Manager
   - CameraTarget
+  - Ability Manager
   layers:
   - Default
   - TransparentFX

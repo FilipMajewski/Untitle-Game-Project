@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InControl;
 
 public class PlayerController : MonoBehaviour
 {
 
     public float maxMoveSpeed;
     public float rotationSmoothSpeed;
-
+    public bool haveDiferentCamera;
     CharacterController cc;
     Animator anim;
     Interaction inter;
@@ -82,7 +83,12 @@ public class PlayerController : MonoBehaviour
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         inter = GetComponent<Interaction>();
-        cameraView = GetComponent<ChangeCameraView>();
+
+        if (haveDiferentCamera)
+        {
+            cameraView = GetComponent<ChangeCameraView>();
+        }
+
         currentSpeed = maxMoveSpeed;
         falling = false;
         crouched = false;
@@ -92,8 +98,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        var inputDevice = InputManager.ActiveDevice;
+
+        horizontal = inputDevice.LeftStickX;
+        vertical = inputDevice.LeftStickY;
 
         if (!cc.isGrounded)
         {
@@ -113,15 +121,22 @@ public class PlayerController : MonoBehaviour
             falling = false;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (inputDevice.Action1.WasPressed)
         {
             anim.SetTrigger("Crouched");
             crouched = !crouched;
         }
 
-        if (cameraView.IsTopdownCameraActive || inter.Hiden)
+        if (haveDiferentCamera)
         {
-            Movement(0, 0);
+            if (cameraView.IsTopdownCameraActive || inter.Hiden)
+            {
+                Movement(0, 0);
+            }
+            else
+            {
+                Movement(horizontal, vertical);
+            }
         }
         else
         {

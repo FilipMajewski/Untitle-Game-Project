@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using InControl;
 
 public class ChangeCameraView : MonoBehaviour
 {
@@ -43,7 +44,9 @@ public class ChangeCameraView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        var inputDevice = InputManager.ActiveDevice;
+
+        if (inputDevice.Action4.WasPressed)
         {
             cam.orthographic = !cam.orthographic;
             normalCamera.gameObject.SetActive(!normalCamera.gameObject.activeSelf);
@@ -58,11 +61,11 @@ public class ChangeCameraView : MonoBehaviour
             topCamera.Follow = targetPoint;
 
 
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (inputDevice.LeftStickX != 0 || inputDevice.LeftStickY != 0)
             {
                 if (cameraBoundryBox.bounds.Contains(targetPoint.position))
                 {
-                    targetPoint.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * 1f);
+                    targetPoint.Translate(new Vector3(inputDevice.LeftStickX, 0, inputDevice.LeftStickY) * 1f);
                 }
                 else
                 {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InControl;
 
 public class Interaction : MonoBehaviour
 {
@@ -72,21 +73,23 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var inputDevice = InputManager.ActiveDevice;
+
         if (canInteract && canPickup)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (inputDevice.Action2.WasPressed)
             {
                 Grab(interactWith);
             }
         }
         if (canInteract && !canPickup)
         {
-            if (!hiden && Input.GetKeyDown(KeyCode.P))
+            if (!hiden && inputDevice.Action2.WasPressed)
             {
                 Hide();
                 Debug.Log("Hiding");
             }
-            else if (hiden && Input.GetKeyDown(KeyCode.P))
+            else if (hiden && inputDevice.Action2.WasPressed)
             {
                 Unhide();
                 Debug.Log("Visible");
